@@ -1,0 +1,19 @@
+out
+dist
+node_modules
+.vscode-test/
+*.vsix
+
+# Local secrets / environment
+.env
+
+# Generated data file
+stats.json
+storage/stats.json
+
+# Python artifacts
+__pycache__/
+*.pyc
+
+# Logs
+*.log

@@ -1,6 +1,10 @@
 import * as vscode from 'vscode';
 import * as path from 'path';
 import { TextDecoder } from 'util';
+import { exec } from 'child_process';
+import { promisify } from 'util';
+
+const execAsync = promisify(exec);
 
 export class SidebarProvider implements vscode.WebviewViewProvider {
   _view?: vscode.WebviewView;
@@ -36,13 +40,23 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
       return; 
     }
 
+    // Show loading state
+    this._view.webview.html = this._getHtmlForWebview(
+      this._view.webview,
+      `<div class="empty">Fetching stats from Hackatime...</div>`
+    );
+
     try {
+      // Run the Python script to generate fresh stats
+      console.log('[Flavourtown] Running Python script to fetch stats...');
+      await this._runPythonScript();
+      
       console.log('[Flavourtown] About to read stats.json');
       const data = await this._readStatsFromFile();
       if (!data) {
         this._view.webview.html = this._getHtmlForWebview(
           this._view.webview,
-          `<div class="empty">No stats yet. Generate storage/stats.json and click refresh.</div>`
+          `<div class="empty">No stats yet. Check that Python script ran successfully.</div>`
         );
         return;
       }
@@ -51,12 +65,45 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
       const htmlContent = this._generateStatsHtml(data);
       this._view.webview.html = this._getHtmlForWebview(this._view.webview, htmlContent);
     } catch (err) {
-      console.error('[Flavourtown] Failed to read stats.json', err);
+      console.error('[Flavourtown] Failed to fetch/read stats', err);
       const message = err instanceof Error ? err.message : String(err);
       this._view.webview.html = this._getHtmlForWebview(
         this._view.webview,
-        `Error reading stats.json: ${message}`
+        `<div class="empty">Error: ${message}<br/><br/>Make sure Python and required packages are installed.</div>`
       );
+    }
+  }
+
+  private async _runPythonScript(): Promise<void> {
+    const scriptPath = path.join(this._extensionUri.fsPath, 'python_scripts', 'get_data.py');
+    const cwd = this._extensionUri.fsPath;
+    
+    // Try python3 first, fall back to python
+    const pythonCmd = process.platform === 'win32' ? 'python' : 'python3';
+    const command = `${pythonCmd} "${scriptPath}"`;
+    
+    console.log('[Flavourtown] Executing:', command);
+    console.log('[Flavourtown] CWD:', cwd);
+    
+    try {
+      const { stdout, stderr } = await execAsync(command, { cwd });
+      if (stderr) {
+        console.warn('[Flavourtown] Python stderr:', stderr);
+      }
+      console.log('[Flavourtown] Python script completed');
+    } catch (error: any) {
+      // Try alternate Python command if first one failed
+      if (error.message?.includes('python') || error.code === 'ENOENT') {
+        const altCmd = process.platform === 'win32' ? 'python3' : 'python';
+        console.log('[Flavourtown] Retrying with', altCmd);
+        const { stdout, stderr } = await execAsync(`${altCmd} "${scriptPath}"`, { cwd });
+        if (stderr) {
+          console.warn('[Flavourtown] Python stderr:', stderr);
+        }
+        console.log('[Flavourtown] Python script completed (alternate command)');
+      } else {
+        throw error;
+      }
     }
   }
 

@@ -1,71 +1,89 @@
-# flavourtown-sidebar README
+# Flavourtown Time Tracking (VS Code Extension)
 
-This is the README for your extension "flavourtown-sidebar". After writing up a brief description, we recommend including the following sections.
+Shows your daily coding stats inside VS Code using Hackatime data.
 
-## Features
+## What it does
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- Adds a **Daily Stats** sidebar view.
+- Reads stats from `storage/stats.json`.
+- Includes a refresh button to reload the latest data.
 
-For example if there is an image subfolder under your extension project workspace:
+## Find Ur API and Username(for .env file):
 
-\!\[feature X\]\(images/feature-x.png\)
+Username:
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+1) log on to hackatime and go to setting (<a href="https://hackatime.hackclub.com/my/settings">Hackatime settings</a>)
+
+2) look for username(create one and press "save setting" if you havent got one.)
+
+API_KEY:
+1) log on to hackatime and go to setting (<a href="https://hackatime.hackclub.com/my/settings">Hackatime settings</a>)
+
+2) at the top look for "set up time tracking button"
+
+3) This is your api key:
+ ![alt text](image.png)
+ copy it and save it somewhere
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- Node.js + npm
+- Python 3.x (for the helper script that fetches Hackatime stats)
 
-## Extension Settings
+## Setup (development)
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+1) Install JS dependencies:
 
-For example:
+```bash
+npm install
+```
 
-This extension contributes the following settings:
+2) Install Python dependencies:
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+```bash
+pip install -r requirements.txt
+```
 
-## Known Issues
+3) Create a `.env` in the project root (next to `package.json`):
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+```env
+HACKATIME_API_KEY=your_token_here
+HACKATIME_USERNAME=your_username_here
+```
 
-## Release Notes
+## Run the extension
 
-Users appreciate release notes as you update your extension.
+Start the TypeScript/esbuild watcher:
 
-### 1.0.0
+```bash
+npm run watch
+```
 
-Initial release of ...
+Then in VS Code:
 
-### 1.0.1
+- Press `F5` (Run Extension)
+- Open the Flavourtown view (Activity Bar) → **Daily Stats**
 
-Fixed issue #.
+## Generate stats
 
-### 1.1.0
+This extension expects a JSON file at:
 
-Added features X, Y, and Z.
+- `storage/stats.json`
 
----
+Generate it by running:
 
-## Following extension guidelines
+```bash
+python python_scripts/get_data.py
+```
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+Then click the refresh button in the sidebar.
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+## Troubleshooting
 
-## Working with Markdown
+- **“No stats yet” / file not found**
+	- Run `python python_scripts/get_data.py` to generate `storage/stats.json`.
+- **Auth errors / empty data**
+	- Verify your `.env` has valid `HACKATIME_API_KEY` and `HACKATIME_USERNAME`.
+- **Debugging**
+	- Open **Debug Console** and look for logs starting with `[Flavourtown]`.
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**

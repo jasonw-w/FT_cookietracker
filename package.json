@@ -19,7 +19,7 @@
         {
           "id": "flavourtown-sidebar-view",
           "title": "Flavourtown Stats",
-          "icon": "media/icon.svg"
+          "icon": "media/chef.svg"
         }
       ]
     },
@@ -27,7 +27,7 @@
       "flavourtown-sidebar-view": [
         {
           "type": "webview",
-          "icon": "media/icon.svg",
+          "icon": "media/chef.svg",
           "id": "flavourtown-data",
           "name": "Daily Stats",
           "visibility": "visible"

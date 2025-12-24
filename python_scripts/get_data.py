@@ -50,8 +50,8 @@ if __name__ == "__main__":
     req = requester()
     
     # Filter out "text" language entries
-    filtered_languages = [lang for lang in req.total_list if lang.get("name", "").lower() != "text"]
-    
+    #filtered_languages = [lang for lang in req.total_list if lang.get("name", "").lower() != "text"]
+    filtered_languages = [lang for lang in req.total_list]
     output = {
         "total_seconds": req.total_seconds,
         "human_readable": req.human_readable_total,

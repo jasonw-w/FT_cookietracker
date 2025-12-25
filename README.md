@@ -6,7 +6,7 @@ Shows your daily coding stats and progress toward your target item.
 1) set up Hackatime api
 
 log in to [Hackatime settings](https://hackatime.hackclub.com/my/settings)
-,then go to setup time tracking![alt text](hackatime_api_demo1.png)
+ ,then go to setup time tracking![alt text](https://raw.githubusercontent.com/jasonw-w/FT_cookietracker/main/hackatime_api_demo1.png)
 
 then look for your api key and copy it to a safe place![alt text](hackatime_api_demo2.png)
 

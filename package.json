@@ -4,7 +4,8 @@
   "displayName": "flavourtown-sidebar",
   "description": "Made for Hack Club Flavourtown event, used to track your cookie earning progress and coding time in VS Code sidebar.",
   "version": "0.0.3",
-  "liscense": "MIT",
+  "license": "MIT",
+  "icon": "media/cookie.png",
   "extensionDependencies": ["ms-python.python"],
   "repository": {
     "type": "git",

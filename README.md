@@ -2,38 +2,45 @@
 
 Shows your daily coding stats and progress toward your target item.
 
+## Install python and install required libraries
+1) [install python](https://www.python.org/downloads/)
+2) install necessary libraries
+```bash
+pip install -r requirements.txt
+```
+
 ## Setup
 1) set up Hackatime api
 
 log in to [Hackatime settings](https://hackatime.hackclub.com/my/settings)
  ,then go to setup time tracking![alt text](https://raw.githubusercontent.com/jasonw-w/FT_cookietracker/main/hackatime_api_demo1.png)
 
-then look for your api key and copy it to a safe place![alt text](hackatime_api_demo2.png)
+then look for your api key and copy it to a safe place![alt text](https://raw.githubusercontent.com/jasonw-w/FT_cookietracker/main/hackatime_api_demo2.png)
 
 2) set up Hackatime Username
 
 log in to [Hackatime settings](https://hackatime.hackclub.com/my/settings)
 
-then copy your Username, or set one up if you havent (don't forget to press save!!!)![alt text](hackatime_username_demo.png)
+then copy your Username, or set one up if you havent (don't forget to press save!!!)![alt text](https://raw.githubusercontent.com/jasonw-w/FT_cookietracker/main/hackatime_username_demo.png)
 
 3) set up Flavourtown api
 
-log in to your flavourtown account and go to setting ![alt text](ft_api_demo1.png)
+log in to your flavourtown account and go to setting ![alt text](https://raw.githubusercontent.com/jasonw-w/FT_cookietracker/main/ft_api_demo1.png)
 
-look for your API key![alt text](ft_api_demo2.png)
+look for your API key![alt text](https://raw.githubusercontent.com/jasonw-w/FT_cookietracker/main/ft_api_demo2.png)
 
-copy it to a save place![alt text](ft_api_demo3.png)
+copy it to a save place![alt text](https://raw.githubusercontent.com/jasonw-w/FT_cookietracker/main/ft_api_demo3.png)
 
 4) install the extension
 
 go to your vscode's sidebar and look for extension, then search for Flavourtown-sidebar, then press install
 
 5) set up extension
-press on the gear icon![alt text](ide_demo1.png)
-paste your apis![alt text](ide_demo2.png)
-enter your Hackatime Username![alt text](ide_demo3.png)
-press refresh![alt text](ide_demo4.png)
-dont forget to set your target!!!![alt text](ide_demo5.png)
+press on the gear icon![alt text](https://raw.githubusercontent.com/jasonw-w/FT_cookietracker/main/ide_demo1.png)
+paste your apis![alt text](https://raw.githubusercontent.com/jasonw-w/FT_cookietracker/main/ide_demo2.png)
+enter your Hackatime Username![alt text](https://raw.githubusercontent.com/jasonw-w/FT_cookietracker/main/ide_demo3.png)
+press refresh![alt text](https://raw.githubusercontent.com/jasonw-w/FT_cookietracker/main/ide_demo4.png)
+dont forget to set your target!!!![alt text](https://raw.githubusercontent.com/jasonw-w/FT_cookietracker/main/ide_demo5.png)
 Congradulations!!! You are all set!
 
 ## Troubleshooting
@@ -42,3 +49,30 @@ Congradulations!!! You are all set!
 
 ## Privacy
 API tokens are stored in your VS Code user settings and sent only to Hackatime/Flavourtown to fetch your data. Remove keys from settings to revoke access.
+
+## Settings
+
+| Setting | Required | Description |
+| --- | --- | --- |
+| hackatime_api | Yes | Hackatime API token used to fetch stats. |
+| username | Yes | Hackatime username for the stats fetch. |
+| flavourtown_api | Optional | Flavourtown API token to fetch store data and pricing. |
+| storeItem | Optional | Store item name to track; set via the picker command. |
+| country | Optional | Pricing region code (au, ca, eu, in, uk, us, xx). |
+| quality | Optional | Quality factor (1-15, default 10) used in the cookie formula. |
+| k | Optional | Advanced exponent k in the cookie formula (default 4). |
+| beta | Optional | Advanced beta factor in the cookie formula (default 2). |
+
+Settings live in VS Code user settings. Env fallbacks (if set): HACKATIME_API_KEY, HACKATIME_USERNAME, FT_API_KEY.
+
+## Cookie Formula
+
+The extension predicts earned cookies using:
+
+$$c(h, q) = 88 \cdot \left(\frac{q}{15}\right)^k \cdot (1 + \beta \ln(1 + h))$$
+
+Where:
+- $h$ = hours coded today
+- $q$ = quality factor (1-15)
+- $k$ = exponent (default 1)
+- $\beta$ = beta factor (default 2)

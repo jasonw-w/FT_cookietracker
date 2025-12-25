@@ -73,7 +73,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 
       // Expected cookies using f(h) = 88 * (quality^k * (1 + beta * ln(1 + h)))
       const quality = Math.min(15, Math.max(1, Number(config.get<number>('quality') ?? 10)));
-      const k = Number(config.get<number>('k') ?? 4);
+      const k = Number(config.get<number>('k') ?? 1);
       const beta = Number(config.get<number>('beta') ?? 2);
       const hours = data.total_seconds ? Number(data.total_seconds) / 3600 : 0;
       const cookiesEarned = 88 * Math.pow((quality)/15, k) * (1 + beta * Math.log(1 + hours));

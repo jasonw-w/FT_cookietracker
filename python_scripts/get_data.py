@@ -72,18 +72,18 @@ if __name__ == "__main__":
 
     text_seconds = 0.0
     python_entry = None
-    kept_languages = [i for i in languages]
-
+    #kept_languages = [i for i in languages]
+    kept_languages = []
     #ignore
-    
-    # for lang in languages:
-    #     name = (lang.get("name", "") or "").strip()
-    #     if name.lower() == "text":
-    #         text_seconds += float(lang.get("total_seconds", 0) or 0)
-    #         continue
-    #     if name.lower() == "python":
-    #         python_entry = lang
-    #     kept_languages.append(lang)
+
+    for lang in languages:
+        name = (lang.get("name", "") or "").strip()
+        if name.lower() == "text":
+            text_seconds += float(lang.get("total_seconds", 0) or 0)
+            continue
+        if name.lower() == "python":
+            python_entry = lang
+        kept_languages.append(lang)
 
     if text_seconds > 0:
         if python_entry:

@@ -26,7 +26,7 @@ export function activate(context: vscode.ExtensionContext) {
 	// Open the extension's settings view in VS Code settings UI
 	const openSettings = vscode.commands.registerCommand(
 		'flavourtown-sidebar.openSettings',
-		() => vscode.commands.executeCommand('workbench.action.openSettings', '@ext:flavourtown.flavourtown-sidebar')
+		() => vscode.commands.executeCommand('workbench.action.openSettings', '@ext:Jasonw-w.flavourtown-sidebar')
 	);
 
 	context.subscriptions.push(openSettings);

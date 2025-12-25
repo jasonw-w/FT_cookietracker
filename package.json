@@ -2,8 +2,8 @@
   "name": "flavourtown-sidebar",
   "publisher": "Jasonw-w",
   "displayName": "flavourtown-sidebar",
-  "description": "",
-  "version": "0.0.1",
+  "description": "Made for Hack Club Flavourtown event, used to track your cookie earning progress and coding time in VS Code sidebar.",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/jasonw-w/FT_cookietracker.git"

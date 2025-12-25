@@ -99,7 +99,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
       const message = err instanceof Error ? err.message : String(err);
       this._view.webview.html = this._getHtmlForWebview(
         this._view.webview,
-        `<div class="empty">Error: ${message}<br/><br/>Make sure Python and required packages are installed.</div>`
+        `<div class="empty">Error: ${message}<br/><br/>Make sure APIs and Username is set in setting (gear icon at the top, look at README.md for tutorial finding your apis.)<br>Make sure Python and required packages are installed.</div>`
       );
     }
   }

@@ -6,6 +6,7 @@ node_modules
 
 # Local secrets / environment
 .env
+.env1
 
 # Generated data file
 stats.json

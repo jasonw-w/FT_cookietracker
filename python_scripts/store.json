@@ -1,0 +1,2809 @@
+{
+    "items": [
+        {
+            "id": 7,
+            "name": "Smolh\u00e5j",
+            "description": "soft and huggable. a true friend :)",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::ThirdPartyPhysical",
+            "show_in_carousel": false,
+            "accessory_tag": "",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": "",
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjM1LCJwdXIiOiJibG9iX2lkIn19--34b25d54db53c692f44b9f67a4c1f6ffd2eb391c/blahaj.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": false,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "133.0",
+                "au": "133.0",
+                "ca": "133.0",
+                "eu": "133.0",
+                "in": "133.0",
+                "uk": "133.0",
+                "us": "133.0",
+                "xx": "133.0"
+            }
+        },
+        {
+            "id": 9,
+            "name": "Macbook Air",
+            "description": "M4 13\" - a favourite on our team!",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::ThirdPartyPhysical",
+            "show_in_carousel": true,
+            "accessory_tag": null,
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjUwLCJwdXIiOiJibG9iX2lkIn19--60d2d36d5c02546f61220f0814b67655a58de042/mba%20Background%20Removed%202.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "4995.0",
+                "au": "4995.0",
+                "ca": "4995.0",
+                "eu": "4995.0",
+                "in": "4995.0",
+                "uk": "4995.0",
+                "us": "4995.0",
+                "xx": "4995.0"
+            }
+        },
+        {
+            "id": 2,
+            "name": "Raspberry Pi 5",
+            "description": "mm,,, great for hosting all your yummy apps!",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::ThirdPartyPhysical",
+            "show_in_carousel": true,
+            "accessory_tag": null,
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjEwLCJwdXIiOiJibG9iX2lkIn19--bb4ab60784a2590933a9f7f273851b7c63f2b731/raspberry-pi-5-raspberry-pi-40958498898115_1000x%20Background%20Removed.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "405.0",
+                "au": "405.0",
+                "ca": "405.0",
+                "eu": "405.0",
+                "in": "405.0",
+                "uk": "405.0",
+                "us": "430.0",
+                "xx": "455.0"
+            }
+        },
+        {
+            "id": 4,
+            "name": "16GB RAM!",
+            "description": "16GB of RAM for a Raspberry Pi 5!",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::Accessory",
+            "show_in_carousel": false,
+            "accessory_tag": "ram",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null,
+                2
+            ],
+            "buyable_by_self": false,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjIwLCJwdXIiOiJibG9iX2lkIn19--3673dc36ba0bf655597ccd2781e5d269c9a0d98d/16gbram.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "427.5",
+                "au": "427.5",
+                "ca": "427.5",
+                "eu": "427.5",
+                "in": "427.5",
+                "uk": "427.5",
+                "us": "427.5",
+                "xx": "427.5"
+            }
+        },
+        {
+            "id": 19,
+            "name": "iPad Air",
+            "description": "perfect for artists! sometimes invisible",
+            "old_prices": [
+                2995
+            ],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::ThirdPartyPhysical",
+            "show_in_carousel": true,
+            "accessory_tag": null,
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6Mjk5LCJwdXIiOiJibG9iX2lkIn19--3b36d113aec75ec7f6b0d270038b90da57ccac42/ipad%20Background%20Removed.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "2500.0",
+                "au": "2500.0",
+                "ca": "2500.0",
+                "eu": "2500.0",
+                "in": "2500.0",
+                "uk": "2500.0",
+                "us": "2500.0",
+                "xx": "2500.0"
+            }
+        },
+        {
+            "id": 10,
+            "name": "Mac Mini",
+            "description": "M4 chip included!",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::ThirdPartyPhysical",
+            "show_in_carousel": true,
+            "accessory_tag": null,
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjU2LCJwdXIiOiJibG9iX2lkIn19--29cf14bf5dc02cac15750d150481a7ad562dedd7/macmini%20Background%20Removed.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "3000.0",
+                "au": "3000.0",
+                "ca": "3000.0",
+                "eu": "3000.0",
+                "in": "3000.0",
+                "uk": "3000.0",
+                "us": "3000.0",
+                "xx": "3000.0"
+            }
+        },
+        {
+            "id": 1,
+            "name": "Stickers!",
+            "description": "we'll actually send you these!",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::FreeStickers",
+            "show_in_carousel": false,
+            "accessory_tag": "",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": "",
+            "max_qty": null,
+            "one_per_person_ever": true,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--471eb3b9c1c6efb0f90bcd83c86b329af44da220/sticker.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "10.0",
+                "au": "10.0",
+                "ca": "10.0",
+                "eu": "10.0",
+                "in": "10.0",
+                "uk": "10.0",
+                "us": "10.0",
+                "xx": "10.0"
+            }
+        },
+        {
+            "id": 5,
+            "name": "Free Domain",
+            "description": "a $10 grant to buy a domain!",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::HCBGrant",
+            "show_in_carousel": true,
+            "accessory_tag": null,
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjI2LCJwdXIiOiJibG9iX2lkIn19--4e4fc0680ac4b0162f01b1b6706d924957b2bfab/Screenshot%202025-12-10%20at%2002.29.41.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "40.0",
+                "au": "40.0",
+                "ca": "40.0",
+                "eu": "40.0",
+                "in": "40.0",
+                "uk": "40.0",
+                "us": "40.0",
+                "xx": "40.0"
+            }
+        },
+        {
+            "id": 15,
+            "name": "GitHub Keycaps",
+            "description": "assorted pack of 8! click git!",
+            "old_prices": [
+                195
+            ],
+            "limited": true,
+            "stock": 17,
+            "type": "ShopItem::WarehouseItem",
+            "show_in_carousel": true,
+            "accessory_tag": null,
+            "agh_contents": null,
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": true,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjgyLCJwdXIiOiJibG9iX2lkIn19--7a1d0514fdf01e854dac0018d4f10a863c83b704/gh_keycaps%20Background%20Removed.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "180.0",
+                "au": "180.0",
+                "ca": "180.0",
+                "eu": "180.0",
+                "in": "180.0",
+                "uk": "180.0",
+                "us": "180.0",
+                "xx": "180.0"
+            }
+        },
+        {
+            "id": 18,
+            "name": "AMS Lite",
+            "description": "Easy multi-coloured 3D printing for Bambu Labs A1 printers!",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::ThirdPartyPhysical",
+            "show_in_carousel": true,
+            "accessory_tag": "",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": "",
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6Mjk1LCJwdXIiOiJibG9iX2lkIn19--3089cbc9be1cc07e786171fefc89551ccadbfaca/ams%20Background%20Removed.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": false,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "1540.0",
+                "au": "1540.0",
+                "ca": "1540.0",
+                "eu": "1340.0",
+                "in": "1540.0",
+                "uk": "1615.0",
+                "us": "1540.0",
+                "xx": "1540.0"
+            }
+        },
+        {
+            "id": 6,
+            "name": "Smolh\u00e5j",
+            "description": "soft and huggable. a true friend",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::WarehouseItem",
+            "show_in_carousel": true,
+            "accessory_tag": null,
+            "agh_contents": null,
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjMwLCJwdXIiOiJibG9iX2lkIn19--871f69ec225a2bfb24625b8a3f622c1819db1560/blahaj.png",
+            "enabled": {
+                "enabled_au": false,
+                "enabled_ca": false,
+                "enabled_eu": false,
+                "enabled_in": false,
+                "enabled_uk": false,
+                "enabled_us": true,
+                "enabled_xx": false
+            },
+            "ticket_cost": {
+                "base_cost": "111.0",
+                "au": "111.0",
+                "ca": "111.0",
+                "eu": "111.0",
+                "in": "111.0",
+                "uk": "111.0",
+                "us": "111.0",
+                "xx": "111.0"
+            }
+        },
+        {
+            "id": 8,
+            "name": "Pinecil",
+            "description": "64 whole pines! doesn't remotely activate for missing hcb receipts",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::WarehouseItem",
+            "show_in_carousel": true,
+            "accessory_tag": null,
+            "agh_contents": [
+                {
+                    "sku": "Har/P64/Pinecil",
+                    "quantity": 1
+                }
+            ],
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjQwLCJwdXIiOiJibG9iX2lkIn19--fc0fcb1a6e458a05272d6b45042f958db81d70ff/pinecil.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "140.0",
+                "au": "140.0",
+                "ca": "140.0",
+                "eu": "140.0",
+                "in": "140.0",
+                "uk": "140.0",
+                "us": "140.0",
+                "xx": "140.0"
+            }
+        },
+        {
+            "id": 16,
+            "name": "Bambu Labs A1",
+            "description": "for when you need to print things that aren't mini...",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::ThirdPartyPhysical",
+            "show_in_carousel": true,
+            "accessory_tag": null,
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6Mjg3LCJwdXIiOiJibG9iX2lkIn19--8de4d6ad99410b5328fb25945b3b412b87b97100/a1.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "1596.0",
+                "au": "1721.0",
+                "ca": "1596.0",
+                "eu": "1101.0",
+                "in": "1596.0",
+                "uk": "1346.0",
+                "us": "1596.0",
+                "xx": "1596.0"
+            }
+        },
+        {
+            "id": 26,
+            "name": "Apple Pencil Pro",
+            "description": "An Apple Pencil with all the features",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::Accessory",
+            "show_in_carousel": true,
+            "accessory_tag": null,
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null,
+                19
+            ],
+            "buyable_by_self": true,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzMxLCJwdXIiOiJibG9iX2lkIn19--e4a8d5cbc032ecc1c0134e02850b5c1867f95b3e/app%20Background%20Removed.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "451.5",
+                "au": "451.5",
+                "ca": "451.5",
+                "eu": "451.5",
+                "in": "451.5",
+                "uk": "451.5",
+                "us": "451.5",
+                "xx": "451.5"
+            }
+        },
+        {
+            "id": 14,
+            "name": "1TB Storage",
+            "description": "1TB Storage for Apple devices",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::Accessory",
+            "show_in_carousel": false,
+            "accessory_tag": "storage",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null,
+                10,
+                9,
+                19
+            ],
+            "buyable_by_self": false,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjcyLCJwdXIiOiJibG9iX2lkIn19--cea58cd9dfd898d97dfad740f11363eed97a2575/1tbstorage.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "1600.0",
+                "au": "1600.0",
+                "ca": "1600.0",
+                "eu": "1600.0",
+                "in": "1600.0",
+                "uk": "1600.0",
+                "us": "1600.0",
+                "xx": "1600.0"
+            }
+        },
+        {
+            "id": 12,
+            "name": "32GB Memory",
+            "description": "32GB Memory for Apple devices",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::Accessory",
+            "show_in_carousel": false,
+            "accessory_tag": "ram",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null,
+                10,
+                9
+            ],
+            "buyable_by_self": false,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjY0LCJwdXIiOiJibG9iX2lkIn19--4e2e308e6a3eddfb741865c3f8b04b6c44499b12/32gbram.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "2000.0",
+                "au": "2000.0",
+                "ca": "2000.0",
+                "eu": "2000.0",
+                "in": "2000.0",
+                "uk": "2000.0",
+                "us": "2000.0",
+                "xx": "2000.0"
+            }
+        },
+        {
+            "id": 21,
+            "name": "Space Grey",
+            "description": "a mystical grey forged in the depths of apple park",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::Accessory",
+            "show_in_carousel": false,
+            "accessory_tag": "colour",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null,
+                19
+            ],
+            "buyable_by_self": false,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzExLCJwdXIiOiJibG9iX2lkIn19--857b7d790d22442cb57d083cc4ab7f5e354c3969/space-grey.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "0.0",
+                "au": "0.0",
+                "ca": "0.0",
+                "eu": "0.0",
+                "in": "0.0",
+                "uk": "0.0",
+                "us": "0.0",
+                "xx": "0.0"
+            }
+        },
+        {
+            "id": 24,
+            "name": "Starlight",
+            "description": "the essence of stars, ground up into an iPad Air finish",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::Accessory",
+            "show_in_carousel": false,
+            "accessory_tag": "colour",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null,
+                19
+            ],
+            "buyable_by_self": false,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzIzLCJwdXIiOiJibG9iX2lkIn19--4215212a6a6d96dbef4da586ad21972f8e262b57/ipad-air-finish-starlight-2024.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "0.0",
+                "au": "0.0",
+                "ca": "0.0",
+                "eu": "0.0",
+                "in": "0.0",
+                "uk": "0.0",
+                "us": "0.0",
+                "xx": "0.0"
+            }
+        },
+        {
+            "id": 22,
+            "name": "Blue",
+            "description": "a shiny blue finish for the iPad",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::Accessory",
+            "show_in_carousel": false,
+            "accessory_tag": "colour",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null,
+                19
+            ],
+            "buyable_by_self": false,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzE1LCJwdXIiOiJibG9iX2lkIn19--bd77258ef9832aec40f346c6e704eecc0f2916e3/ipad-air-finish-blue-2024.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "0.0",
+                "au": "0.0",
+                "ca": "0.0",
+                "eu": "0.0",
+                "in": "0.0",
+                "uk": "0.0",
+                "us": "0.0",
+                "xx": "0.0"
+            }
+        },
+        {
+            "id": 13,
+            "name": "512GB Storage",
+            "description": "512GB Storage for Apple devices",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::Accessory",
+            "show_in_carousel": false,
+            "accessory_tag": "storage",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null,
+                10,
+                9,
+                19
+            ],
+            "buyable_by_self": false,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjY4LCJwdXIiOiJibG9iX2lkIn19--b142842fbefb493e1c3939be75dadf6b689e8f03/512gbstorage.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "800.0",
+                "au": "800.0",
+                "ca": "800.0",
+                "eu": "800.0",
+                "in": "800.0",
+                "uk": "800.0",
+                "us": "800.0",
+                "xx": "800.0"
+            }
+        },
+        {
+            "id": 25,
+            "name": "256GB Storage",
+            "description": "256GB storage for Apple devices",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::Accessory",
+            "show_in_carousel": false,
+            "accessory_tag": "storage",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null,
+                19
+            ],
+            "buyable_by_self": false,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzI3LCJwdXIiOiJibG9iX2lkIn19--a559f14f04fad8d3d8b101faa5b6af46f545b250/256gbstorage.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "500.0",
+                "au": "500.0",
+                "ca": "500.0",
+                "eu": "500.0",
+                "in": "500.0",
+                "uk": "500.0",
+                "us": "500.0",
+                "xx": "500.0"
+            }
+        },
+        {
+            "id": 23,
+            "name": "Purple",
+            "description": "plucked from peonies, a lovely purple coating for iPad Air",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::Accessory",
+            "show_in_carousel": false,
+            "accessory_tag": "colour",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null,
+                19
+            ],
+            "buyable_by_self": false,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzE5LCJwdXIiOiJibG9iX2lkIn19--008b5a1cd752eb6e32b0f42c93d43183dbdce5d5/ipad-air-finish-purple-2024.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "0.0",
+                "au": "0.0",
+                "ca": "0.0",
+                "eu": "0.0",
+                "in": "0.0",
+                "uk": "0.0",
+                "us": "0.0",
+                "xx": "0.0"
+            }
+        },
+        {
+            "id": 28,
+            "name": "1 lb fudge from place next to HQ",
+            "description": "Contains eggs, and butter. handmade by our very sweet vermont neighbor in a room with nuts in it",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::ThirdPartyPhysical",
+            "show_in_carousel": true,
+            "accessory_tag": null,
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzQwLCJwdXIiOiJibG9iX2lkIn19--8c59415975dbced2130a99575689db332f57b019/fudge%20Background%20Removed.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": false,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "250.0",
+                "au": "250.0",
+                "ca": "250.0",
+                "eu": "250.0",
+                "in": "250.0",
+                "uk": "250.0",
+                "us": "250.0",
+                "xx": "250.0"
+            }
+        },
+        {
+            "id": 3,
+            "name": "8GB RAM!",
+            "description": "more ram for a rpi 5!",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::Accessory",
+            "show_in_carousel": false,
+            "accessory_tag": "ram",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null,
+                2
+            ],
+            "buyable_by_self": false,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjE0LCJwdXIiOiJibG9iX2lkIn19--2f136d7234f91dd199f183537dd7703aad972cb6/8gb.jpg",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "144.0",
+                "au": "144.0",
+                "ca": "144.0",
+                "eu": "144.0",
+                "in": "144.0",
+                "uk": "144.0",
+                "us": "144.0",
+                "xx": "144.0"
+            }
+        },
+        {
+            "id": 20,
+            "name": "13\" model",
+            "description": "13 whole inches!",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::Accessory",
+            "show_in_carousel": false,
+            "accessory_tag": "size",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null,
+                19
+            ],
+            "buyable_by_self": false,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzA2LCJwdXIiOiJibG9iX2lkIn19--7860c46489f2917a4d992621c2ff5f8bf754c811/13-ipad%20Background%20Removed.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "1000.0",
+                "au": "1000.0",
+                "ca": "1000.0",
+                "eu": "1000.0",
+                "in": "1000.0",
+                "uk": "1000.0",
+                "us": "1000.0",
+                "xx": "1000.0"
+            }
+        },
+        {
+            "id": 27,
+            "name": "Factorio",
+            "description": "ah where did the past 5 hours go?",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::ThirdPartyDigital",
+            "show_in_carousel": true,
+            "accessory_tag": null,
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzM2LCJwdXIiOiJibG9iX2lkIn19--f17d9830a3942072721af09309e204c0df9f778e/factorio-cover.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "210.0",
+                "au": "210.0",
+                "ca": "210.0",
+                "eu": "210.0",
+                "in": "210.0",
+                "uk": "210.0",
+                "us": "210.0",
+                "xx": "210.0"
+            }
+        },
+        {
+            "id": 17,
+            "name": "AMS Lite",
+            "description": "Easy multi-coloured printing for Bambu Labs A1 printers!",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::Accessory",
+            "show_in_carousel": false,
+            "accessory_tag": null,
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null,
+                16
+            ],
+            "buyable_by_self": false,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjkxLCJwdXIiOiJibG9iX2lkIn19--f351fe0e93785e17874bab3c65336808c57e5b56/A1_2%20Background%20Removed.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "720.0",
+                "au": "720.0",
+                "ca": "720.0",
+                "eu": "720.0",
+                "in": "720.0",
+                "uk": "720.0",
+                "us": "720.0",
+                "xx": "720.0"
+            }
+        },
+        {
+            "id": 29,
+            "name": "Yubikey",
+            "description": "5C NFC variant!",
+            "old_prices": [
+                302
+            ],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::WarehouseItem",
+            "show_in_carousel": true,
+            "accessory_tag": null,
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzQ0LCJwdXIiOiJibG9iX2lkIn19--668918610996dc1c8b30ff0f3c537bec337c697e/yubikey.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "206.0",
+                "au": "206.0",
+                "ca": "206.0",
+                "eu": "206.0",
+                "in": "206.0",
+                "uk": "206.0",
+                "us": "206.0",
+                "xx": "206.0"
+            }
+        },
+        {
+            "id": 31,
+            "name": "HackDucky",
+            "description": "it hacks and it quacks",
+            "old_prices": [
+                88
+            ],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::HackClubberItem",
+            "show_in_carousel": true,
+            "accessory_tag": null,
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzcxLCJwdXIiOiJibG9iX2lkIn19--92673bfd80d9023376d6529f73f47087787df41c/image%20(1).png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "100.0",
+                "au": "75.0",
+                "ca": "100.0",
+                "eu": "100.0",
+                "in": "100.0",
+                "uk": "100.0",
+                "us": "100.0",
+                "xx": "100.0"
+            }
+        },
+        {
+            "id": 11,
+            "name": "24GB Memory",
+            "description": "24GB memory for Apple devices",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::Accessory",
+            "show_in_carousel": false,
+            "accessory_tag": "ram",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null,
+                10,
+                9
+            ],
+            "buyable_by_self": false,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjYwLCJwdXIiOiJibG9iX2lkIn19--e868085479a930e18850385173639b6971a189e1/24gbram.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "1000.0",
+                "au": "1000.0",
+                "ca": "1000.0",
+                "eu": "1000.0",
+                "in": "1000.0",
+                "uk": "1000.0",
+                "us": "1000.0",
+                "xx": "1000.0"
+            }
+        },
+        {
+            "id": 32,
+            "name": "Raspberry Pi 500",
+            "description": "finally, a computer for people on the move",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::ThirdPartyPhysical",
+            "show_in_carousel": true,
+            "accessory_tag": null,
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6Mzc2LCJwdXIiOiJibG9iX2lkIn19--56ecb6aa1adc6acdcfb04f4759795109f99aa313/raspberry-pi-500-raspberry-pi-72510429626753_1000x%20Background%20Removed.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "607.5",
+                "au": "607.5",
+                "ca": "607.5",
+                "eu": "607.5",
+                "in": "607.5",
+                "uk": "607.5",
+                "us": "607.5",
+                "xx": "607.5"
+            }
+        },
+        {
+            "id": 39,
+            "name": "Lavender",
+            "description": "lavender fw12",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::Accessory",
+            "show_in_carousel": false,
+            "accessory_tag": "colour",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null,
+                37
+            ],
+            "buyable_by_self": false,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTQ0NywicHVyIjoiYmxvYl9pZCJ9fQ==--ae9c74d83c48ff6d2a54b52f1b802bf1f0d8263a/fw12.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "0.0",
+                "au": "0.0",
+                "ca": "0.0",
+                "eu": "0.0",
+                "in": "0.0",
+                "uk": "0.0",
+                "us": "0.0",
+                "xx": "0.0"
+            }
+        },
+        {
+            "id": 33,
+            "name": "CMF Buds 2 Plus",
+            "description": "nothing to hear here!",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::ThirdPartyPhysical",
+            "show_in_carousel": true,
+            "accessory_tag": null,
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NDAxLCJwdXIiOiJibG9iX2lkIn19--78eadd937902171db714a196cdc45f1422193c47/0000s_0080_CMF-Buds-2-Plus-case-blue.webp",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "471.25",
+                "au": "471.25",
+                "ca": "471.25",
+                "eu": "471.25",
+                "in": "471.25",
+                "uk": "471.25",
+                "us": "471.25",
+                "xx": "471.25"
+            }
+        },
+        {
+            "id": 34,
+            "name": "Pile Of Stickers",
+            "description": "a few hack club stickers :)",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::PileOfStickersItem",
+            "show_in_carousel": true,
+            "accessory_tag": "",
+            "agh_contents": {
+                "choice": [
+                    "Sti/Sti/Bob/1st",
+                    "Sti/Arc/Orp/Cla",
+                    "Sti/Sti/Put/She",
+                    "Sti/Sti/AI-/1st",
+                    "Sti/Bra/Hak/Fin",
+                    "Sti/Bra/The/1st",
+                    "Sti/Sti/Orp/Thu",
+                    "Sti/YSWS/Fraps/1st",
+                    "Sti/Bra/Hei/Btm",
+                    "Sti/Bra/Mac/1st",
+                    "Sti/Out/Log/Zoy",
+                    "Sti/Sti/Hac/1st",
+                    "Sti/Sti/Kaw/1st",
+                    "Sti/Bra/HQ-/Rac",
+                    "Sti/Sti/Coc/1st",
+                    "Sti/Blo/B-O/1st",
+                    "Sti/Sti/AI-/Cam",
+                    "Sti/Sti/Som/She",
+                    "Sti/FIR/Cob/No-",
+                    "Sti/Nes/Par/Ele",
+                    "Sti/Arc/Orp/Las",
+                    "Sti/Sti/Fla/Top",
+                    "Sti/Bra/Orp/Riv",
+                    "Sti/Bra/Hei/Pls",
+                    "Sti/OnB/Sur/1st",
+                    "Sti/Nes/Bab/Ele",
+                    "Sti/Bra/Und/Sta",
+                    "Sti/Bra/Ray/1st"
+                ],
+                "base_qty": 3
+            },
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NTMyLCJwdXIiOiJibG9iX2lkIn19--00960983352d912aa3d30bbee91e810628fffb7f/pile_of_stickers.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "25.0",
+                "au": "25.0",
+                "ca": "25.0",
+                "eu": "25.0",
+                "in": "25.0",
+                "uk": "25.0",
+                "us": "25.0",
+                "xx": "25.0"
+            }
+        },
+        {
+            "id": 45,
+            "name": "1TB",
+            "description": "1tb storage for fw12",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::Accessory",
+            "show_in_carousel": false,
+            "accessory_tag": "storage",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null,
+                37
+            ],
+            "buyable_by_self": false,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTQ5NywicHVyIjoiYmxvYl9pZCJ9fQ==--2f860313089ca3514b09d128783e91b43261e239/fw12.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "240.0",
+                "au": "215.0",
+                "ca": "190.0",
+                "eu": "340.0",
+                "in": "240.0",
+                "uk": "340.0",
+                "us": "240.0",
+                "xx": "340.0"
+            }
+        },
+        {
+            "id": 35,
+            "name": "Pebble Time 2",
+            "description": "simple e-paper smartwatch running PebbleOS",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::ThirdPartyPhysical",
+            "show_in_carousel": true,
+            "accessory_tag": "",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NjA1LCJwdXIiOiJibG9iX2lkIn19--950ca1e10b1b38afc729c7caec9c747c99be6d1c/BIN0DIy-Photoroom.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "1310.0",
+                "au": "1310.0",
+                "ca": "1310.0",
+                "eu": "1310.0",
+                "in": "1310.0",
+                "uk": "1310.0",
+                "us": "1310.0",
+                "xx": "1310.0"
+            }
+        },
+        {
+            "id": 36,
+            "name": "Bambu Lab A1 mini 3D Printer",
+            "description": "It's like an A1 but mini",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::ThirdPartyPhysical",
+            "show_in_carousel": true,
+            "accessory_tag": "",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTA0MCwicHVyIjoiYmxvYl9pZCJ9fQ==--cedc8c99b13ed26168072804c69734c4936763cf/a1mini.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "1050.0",
+                "au": "1050.0",
+                "ca": "1050.0",
+                "eu": "666.0",
+                "in": "1050.0",
+                "uk": "690.0",
+                "us": "1050.0",
+                "xx": "1050.0"
+            }
+        },
+        {
+            "id": 37,
+            "name": "Framework Laptop 12",
+            "description": "repairable touch screen laptop! diy edition",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::ThirdPartyPhysical",
+            "show_in_carousel": true,
+            "accessory_tag": "",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTQzNSwicHVyIjoiYmxvYl9pZCJ9fQ==--abc9aa0c2868fd1e8a076b5efaa0b9fefc9bc6a0/fw12.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": false,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "3434.0",
+                "au": "3434.0",
+                "ca": "3434.0",
+                "eu": "3434.0",
+                "in": "3434.0",
+                "uk": "3434.0",
+                "us": "3434.0",
+                "xx": "3434.0"
+            }
+        },
+        {
+            "id": 41,
+            "name": "Sage",
+            "description": "Sage colour for fw12",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::Accessory",
+            "show_in_carousel": false,
+            "accessory_tag": "colour",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null,
+                37
+            ],
+            "buyable_by_self": false,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTQ2NCwicHVyIjoiYmxvYl9pZCJ9fQ==--9d738020224acec1d4c039f0662de904db71ba0c/fw12.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "0.0",
+                "au": "0.0",
+                "ca": "0.0",
+                "eu": "0.0",
+                "in": "0.0",
+                "uk": "0.0",
+                "us": "0.0",
+                "xx": "0.0"
+            }
+        },
+        {
+            "id": 38,
+            "name": "Grey",
+            "description": "grey for fw12",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::Accessory",
+            "show_in_carousel": false,
+            "accessory_tag": "colour",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null,
+                37
+            ],
+            "buyable_by_self": false,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTQ0MSwicHVyIjoiYmxvYl9pZCJ9fQ==--b111cfb1d4f0c0daa2aa5d59148e43f7f1d9c0d0/fw12.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "0.0",
+                "au": "0.0",
+                "ca": "0.0",
+                "eu": "0.0",
+                "in": "0.0",
+                "uk": "0.0",
+                "us": "0.0",
+                "xx": "0.0"
+            }
+        },
+        {
+            "id": 40,
+            "name": "Bubblegum",
+            "description": "bubblegum colour for fw12",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::Accessory",
+            "show_in_carousel": false,
+            "accessory_tag": "colour",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null,
+                37
+            ],
+            "buyable_by_self": false,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTQ1NywicHVyIjoiYmxvYl9pZCJ9fQ==--a35b5ec200847988b5183e449dd2507c2bdc6ded/fw12.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "0.0",
+                "au": "0.0",
+                "ca": "0.0",
+                "eu": "0.0",
+                "in": "0.0",
+                "uk": "0.0",
+                "us": "0.0",
+                "xx": "0.0"
+            }
+        },
+        {
+            "id": 46,
+            "name": "AI Credits",
+            "description": "Credits for your favorite AI providers!",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::HCBGrant",
+            "show_in_carousel": false,
+            "accessory_tag": "",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": "You can use it at any of the following places!\r\n- [OpenAI](https://openai.com/api/)\r\n- [Anthropic](https://platform.claude.com/docs/en/home)\r\n- [Groq](https://groq.com)\r\n- [Amp](https://ampcode.com)\r\n- [Openrouter](https://openrouter.ai)\r\n",
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTY2NCwicHVyIjoiYmxvYl9pZCJ9fQ==--f45a32bef856a14dcc83229efddfc2723f068f8f/ai.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "35.0",
+                "au": "35.0",
+                "ca": "35.0",
+                "eu": "35.0",
+                "in": "35.0",
+                "uk": "35.0",
+                "us": "35.0",
+                "xx": "35.0"
+            }
+        },
+        {
+            "id": 42,
+            "name": " i5-1334U",
+            "description": " i5-1334U system for fw12",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::Accessory",
+            "show_in_carousel": false,
+            "accessory_tag": "system",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null,
+                37
+            ],
+            "buyable_by_self": false,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTQ3MSwicHVyIjoiYmxvYl9pZCJ9fQ==--085ad5ee2211b07dcd0193f683cb1ec4a1eb4ca7/fw12.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "750.0",
+                "au": "925.0",
+                "ca": "800.0",
+                "eu": "1000.0",
+                "in": "750.0",
+                "uk": "1000.0",
+                "us": "750.0",
+                "xx": "900.0"
+            }
+        },
+        {
+            "id": 43,
+            "name": "16GB RAM",
+            "description": "fw12 16GB RAM",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::Accessory",
+            "show_in_carousel": false,
+            "accessory_tag": "memory",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null,
+                37
+            ],
+            "buyable_by_self": false,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTQ3NywicHVyIjoiYmxvYl9pZCJ9fQ==--99ffab1a62192dbe2b5827b59cc01f662005d6bf/fw12.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "240.0",
+                "au": "215.0",
+                "ca": "190.0",
+                "eu": "340.0",
+                "in": "240.0",
+                "uk": "340.0",
+                "us": "240.0",
+                "xx": "340.0"
+            }
+        },
+        {
+            "id": 44,
+            "name": "32GB RAM",
+            "description": "fw12 32GB RAM",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::Accessory",
+            "show_in_carousel": false,
+            "accessory_tag": "memory",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null,
+                37
+            ],
+            "buyable_by_self": false,
+            "long_description": null,
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTQ5MSwicHVyIjoiYmxvYl9pZCJ9fQ==--0c6f4acb82e7f2c4fb3404d029c07d848e80b756/fw12.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "480.0",
+                "au": "430.0",
+                "ca": "380.0",
+                "eu": "680.0",
+                "in": "480.0",
+                "uk": "680.0",
+                "us": "480.0",
+                "xx": "580.0"
+            }
+        },
+        {
+            "id": 47,
+            "name": "Cloudflare Credits",
+            "description": "from tunnels to storage to proxies the internet's your oyster",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::HCBGrant",
+            "show_in_carousel": false,
+            "accessory_tag": "",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": "Can be used for anything on Cloudflare!\r\n\r\n",
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTEwNCwicHVyIjoiYmxvYl9pZCJ9fQ==--aa4d0afda8d44ab14907d503106e1b2149170301/cloudflare.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "35.0",
+                "au": "35.0",
+                "ca": "35.0",
+                "eu": "35.0",
+                "in": "35.0",
+                "uk": "35.0",
+                "us": "35.0",
+                "xx": "35.0"
+            }
+        },
+        {
+            "id": 49,
+            "name": "iFixit Credits",
+            "description": "you fix it? iFixit!",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::HCBGrant",
+            "show_in_carousel": false,
+            "accessory_tag": "",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": "",
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTExMiwicHVyIjoiYmxvYl9pZCJ9fQ==--5c4633283db99ccc80707354440342ce4bdfede0/ifixit.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "45.0",
+                "au": "45.0",
+                "ca": "45.0",
+                "eu": "45.0",
+                "in": "45.0",
+                "uk": "45.0",
+                "us": "45.0",
+                "xx": "45.0"
+            }
+        },
+        {
+            "id": 50,
+            "name": "Cloud Hosting Credits",
+            "description": "Credits for your favorite hosting providers!",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::HCBGrant",
+            "show_in_carousel": false,
+            "accessory_tag": "",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": "This can be used at any of the following vendors:\r\n- [Heroku](https://www.heroku.com)\r\n- [Vercel](https://vercel.com)\r\n- [DigitalOcean](https://www.digitalocean.com)\r\n- [Linode](https://www.linode.com)\r\n- [Google Cloud](https://cloud.google.com)\r\n- [Pyro](https://pyro.host/vps)\r\n- [Hetzner](https://www.hetzner.com)",
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTY5NCwicHVyIjoiYmxvYl9pZCJ9fQ==--539d87abf6686be7dff2270b9ba2ebab4c02a5f0/hosting.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "40.0",
+                "au": "40.0",
+                "ca": "40.0",
+                "eu": "40.0",
+                "in": "40.0",
+                "uk": "40.0",
+                "us": "40.0",
+                "xx": "40.0"
+            }
+        },
+        {
+            "id": 30,
+            "name": "Hot Chocolate!",
+            "description": "2 swiss miss hot chocolate packets",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::WarehouseItem",
+            "show_in_carousel": true,
+            "accessory_tag": "",
+            "agh_contents": null,
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": "",
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTkxOCwicHVyIjoiYmxvYl9pZCJ9fQ==--73bfb890b1821ad3e69ecb8d989b706465909fb0/hotchoc.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "40.0",
+                "au": "40.0",
+                "ca": "40.0",
+                "eu": "40.0",
+                "in": "40.0",
+                "uk": "40.0",
+                "us": "40.0",
+                "xx": "40.0"
+            }
+        },
+        {
+            "id": 61,
+            "name": "Open Sauce 2026 Tickets",
+            "description": "the saucey bottle is open for you...",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::SpecialFulfillmentItem",
+            "show_in_carousel": true,
+            "accessory_tag": "",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": "Open Sauce is a maker fair from July 17-19 2026 in San Francisco! You get to meet YouTubers, engineers, artists and so many incredible people in STEM and see hundreds of unique and crazy creations. Highly recommended!\r\n\r\n[Check it out :D](https://opensauce.com/)\r\n\r\n_This only gives you a ticket. If you need a travel stipend, please select that on the right._\r\n\r\n---\r\n\r\nThe travel stipend covers up to $800 in your travel costs for Open Sauce!\r\n\r\nIf this isn't enough for you, shoot [@amber](https://hackclub.enterprise.slack.com/team/U054VC2KM9P) a message on Slack and we'll figure something out!",
+            "max_qty": null,
+            "one_per_person_ever": true,
+            "sale_percentage": 25,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NTk5MSwicHVyIjoiYmxvYl9pZCJ9fQ==--47800d21a2df7e9d986db101eb5b48e27235cda0/opensauce.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "600.0",
+                "au": "600.0",
+                "ca": "600.0",
+                "eu": "600.0",
+                "in": "600.0",
+                "uk": "600.0",
+                "us": "600.0",
+                "xx": "600.0"
+            }
+        },
+        {
+            "id": 51,
+            "name": "Magic Keyboard",
+            "description": "maybe it autotypes?",
+            "old_prices": [],
+            "limited": true,
+            "stock": 10,
+            "type": "ShopItem::HQMailItem",
+            "show_in_carousel": true,
+            "accessory_tag": "",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": "A \u2728magical \u2728keyboard, beloved by witches and warlocks across the realm! Comes with a lightning <-> USB-C cable too.",
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NDA3MCwicHVyIjoiYmxvYl9pZCJ9fQ==--4b2acfa45a2a914dbe31136ab9aa0172ae26ea73/magickeyboard.jpg",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "700.0",
+                "au": "800.0",
+                "ca": "800.0",
+                "eu": "800.0",
+                "in": "800.0",
+                "uk": "800.0",
+                "us": "700.0",
+                "xx": "800.0"
+            }
+        },
+        {
+            "id": 56,
+            "name": "ugee Drawing Tablet",
+            "description": "a simple drawing tablet with buttons!",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::ThirdPartyPhysical",
+            "show_in_carousel": true,
+            "accessory_tag": "",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": "It's an UGEE 6.5\" S640!\r\n\r\nhttps://shop.ugee.com/products/ugee-drawing-tablet-s640",
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NTU3NywicHVyIjoiYmxvYl9pZCJ9fQ==--3cc14931d4e91e3b87ab7e1182ef5313ddfe11e1/ugee-removebg-preview.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "176.0",
+                "au": "176.0",
+                "ca": "176.0",
+                "eu": "176.0",
+                "in": "176.0",
+                "uk": "176.0",
+                "us": "176.0",
+                "xx": "176.0"
+            }
+        },
+        {
+            "id": 52,
+            "name": "$50 Proton Credit",
+            "description": "for those privacy-conscious electrons",
+            "old_prices": [],
+            "limited": true,
+            "stock": 70,
+            "type": "ShopItem::SpecialFulfillmentItem",
+            "show_in_carousel": false,
+            "accessory_tag": "",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": "Can be used on any Proton service!",
+            "max_qty": null,
+            "one_per_person_ever": true,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA3NSwicHVyIjoiYmxvYl9pZCJ9fQ==--c0a2a05c8b69ca3cece13976d3c5137383a79214/proton%2050.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "300.0",
+                "au": "300.0",
+                "ca": "300.0",
+                "eu": "300.0",
+                "in": "300.0",
+                "uk": "300.0",
+                "us": "300.0",
+                "xx": "300.0"
+            }
+        },
+        {
+            "id": 53,
+            "name": "$100 Credit",
+            "description": "make it one hundro!",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::Accessory",
+            "show_in_carousel": false,
+            "accessory_tag": "",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null,
+                52
+            ],
+            "buyable_by_self": false,
+            "long_description": "",
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA4NiwicHVyIjoiYmxvYl9pZCJ9fQ==--b343a041784ed1c591b5a6bcd9d2e65bacb9a108/proton%20100.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "300.0",
+                "au": "300.0",
+                "ca": "300.0",
+                "eu": "300.0",
+                "in": "300.0",
+                "uk": "300.0",
+                "us": "300.0",
+                "xx": "300.0"
+            }
+        },
+        {
+            "id": 60,
+            "name": "Canon R50 Camera",
+            "description": "a great starter camera! you can shoot all the birds with this",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::ThirdPartyPhysical",
+            "show_in_carousel": false,
+            "accessory_tag": "",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": "This is refurbished! Includes a [Canon R50](https://www.canon.co.uk/cameras/eos-r50) and a [18-45mm lens](https://www.canon.co.uk/lenses/rf-s-18-45mm-f4-5-6-3-is-stm/specifications).\r\n\r\nThis is an outstanding mirrorless camera and is amazing for your first steps into digital photography.\r\n\r\nIt's not a DSLR camera, but mirrorless is mostly better!",
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NTg1NCwicHVyIjoiYmxvYl9pZCJ9fQ==--36845314ce779bf6623a0e70dcd39ae8d08982cb/r50.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "3690.0",
+                "au": "3690.0",
+                "ca": "3690.0",
+                "eu": "3690.0",
+                "in": "3690.0",
+                "uk": "3690.0",
+                "us": "3690.0",
+                "xx": "3690.0"
+            }
+        },
+        {
+            "id": 64,
+            "name": "Flipper Zero",
+            "description": "Flipper Zero is a portable multi-tool for pentesters and geeks in a toy-like body, dolphins included",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::ThirdPartyPhysical",
+            "show_in_carousel": true,
+            "accessory_tag": "",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": "",
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NjExMiwicHVyIjoiYmxvYl9pZCJ9fQ==--25cf70d36b4de548be6e7f5aff7b2f356014663b/flipper.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": false,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": false
+            },
+            "ticket_cost": {
+                "base_cost": "800.0",
+                "au": "800.0",
+                "ca": "800.0",
+                "eu": "800.0",
+                "in": "800.0",
+                "uk": "800.0",
+                "us": "800.0",
+                "xx": "800.0"
+            }
+        },
+        {
+            "id": 57,
+            "name": "Polaroid Go Gen 2",
+            "description": "the true flavortown was the friends we made along the way...",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::ThirdPartyPhysical",
+            "show_in_carousel": false,
+            "accessory_tag": "",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": "Take amazing film photos with this :D\r\n\r\nIncludes a travel bag and film!\r\n\r\nhttps://www.polaroid.com/en_gb/products/polaroid-go-travel-set",
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NTU5NCwicHVyIjoiYmxvYl9pZCJ9fQ==--a9a145bfe4a10a7f16209d4e3482b31a6ef00b3e/polaroid.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "862.0",
+                "au": "862.0",
+                "ca": "862.0",
+                "eu": "862.0",
+                "in": "862.0",
+                "uk": "862.0",
+                "us": "862.0",
+                "xx": "862.0"
+            }
+        },
+        {
+            "id": 55,
+            "name": "Proxmark 3 RDV 4",
+            "description": "don't do anything we wouldn't do :3",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::ThirdPartyPhysical",
+            "show_in_carousel": true,
+            "accessory_tag": "",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": "",
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NTUxNywicHVyIjoiYmxvYl9pZCJ9fQ==--d85a2e9eb5733fec8774151c525286fff0672670/proxmark.rdv4-kit-454A9876a-removebg-preview.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "1260.0",
+                "au": "1260.0",
+                "ca": "1260.0",
+                "eu": "1260.0",
+                "in": "1260.0",
+                "uk": "1260.0",
+                "us": "1260.0",
+                "xx": "1260.0"
+            }
+        },
+        {
+            "id": 58,
+            "name": "Nothing headphone (1)",
+            "description": "[   ] sorry, what was that?",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::ThirdPartyPhysical",
+            "show_in_carousel": true,
+            "accessory_tag": "",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": "A great pair of ANC headphones with physical controls!\r\n\r\n[See more](https://nothing.tech/products/headphone-1)",
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NTYyNSwicHVyIjoiYmxvYl9pZCJ9fQ==--4afd35185157741de62d1e381b4419119155fd58/nothing.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "1495.0",
+                "au": "1495.0",
+                "ca": "1495.0",
+                "eu": "1495.0",
+                "in": "1495.0",
+                "uk": "1495.0",
+                "us": "1495.0",
+                "xx": "1495.0"
+            }
+        },
+        {
+            "id": 59,
+            "name": "SO-ARM101 DIY Kit",
+            "description": "control your own robotic arm!",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::ThirdPartyPhysical",
+            "show_in_carousel": true,
+            "accessory_tag": "",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": "Built by Hugging Face and LeRobot, perfect for building a robotics system from the ground up!\r\n\r\n[See more info](https://shop.wowrobo.com/products/so-arm101-diy-kit-assembled-version-1?variant=46588630630617)",
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NTY4MSwicHVyIjoiYmxvYl9pZCJ9fQ==--e2f858905016ba9cbcb0f5bd59a6c7663ca9c6ca/101main-01-removebg-preview.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "1440.0",
+                "au": "1440.0",
+                "ca": "1440.0",
+                "eu": "1440.0",
+                "in": "1440.0",
+                "uk": "1440.0",
+                "us": "1440.0",
+                "xx": "1440.0"
+            }
+        },
+        {
+            "id": 63,
+            "name": "GitHub Notebook",
+            "description": "git commit -m \"writing a note here\"",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::WarehouseItem",
+            "show_in_carousel": true,
+            "accessory_tag": "",
+            "agh_contents": [
+                {
+                    "sku": "Swa/Git/Not/Lay",
+                    "quantity": 1
+                }
+            ],
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": "",
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NjA5OCwicHVyIjoiYmxvYl9pZCJ9fQ==--34eb99b0115ea744c1a356a841bf3f94b4afe2c1/githubnotebook.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "143.0",
+                "au": "143.0",
+                "ca": "143.0",
+                "eu": "143.0",
+                "in": "143.0",
+                "uk": "143.0",
+                "us": "143.0",
+                "xx": "143.0"
+            }
+        },
+        {
+            "id": 62,
+            "name": "Travel Stipend",
+            "description": "Travel stipend",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::Accessory",
+            "show_in_carousel": false,
+            "accessory_tag": "",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null,
+                61
+            ],
+            "buyable_by_self": false,
+            "long_description": "This travel stipend covers up to $800 in your travel costs for Open Sauce!\r\n\r\nIf this isn't enough for you, shoot [@amber](https://hackclub.enterprise.slack.com/team/U054VC2KM9P) a message on Slack and we'll figure something out!",
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NTk5OCwicHVyIjoiYmxvYl9pZCJ9fQ==--5caa01bd362f0d2b5034d32ec77cf51956a63716/opensauce.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "1750.0",
+                "au": "1750.0",
+                "ca": "1750.0",
+                "eu": "1750.0",
+                "in": "1750.0",
+                "uk": "1750.0",
+                "us": "1750.0",
+                "xx": "1750.0"
+            }
+        },
+        {
+            "id": 65,
+            "name": "Quest 3",
+            "description": "virtual reality headset!",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::ThirdPartyPhysical",
+            "show_in_carousel": true,
+            "accessory_tag": "",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": "",
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NjE0NywicHVyIjoiYmxvYl9pZCJ9fQ==--98f38a95110064e154570836315e71b07d63f1c0/quest.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "2750.0",
+                "au": "2750.0",
+                "ca": "2750.0",
+                "eu": "2750.0",
+                "in": "2750.0",
+                "uk": "2750.0",
+                "us": "2750.0",
+                "xx": "2750.0"
+            }
+        },
+        {
+            "id": 54,
+            "name": "Mullvad 6 Month Voucher",
+            "description": "the worlds best vpn for privacy online!",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::ThirdPartyDigital",
+            "show_in_carousel": false,
+            "accessory_tag": "",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": "",
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTEyMSwicHVyIjoiYmxvYl9pZCJ9fQ==--2dfab7da486391b017e30c4156fb6e626b0c0a3a/mullvad.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "216.0",
+                "au": "216.0",
+                "ca": "216.0",
+                "eu": "216.0",
+                "in": "216.0",
+                "uk": "216.0",
+                "us": "216.0",
+                "xx": "216.0"
+            }
+        },
+        {
+            "id": 48,
+            "name": "PCB Manufacturing Credits",
+            "description": "i think pcb, therefore i am pcb",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::HCBGrant",
+            "show_in_carousel": false,
+            "accessory_tag": "",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": "JLC? PCB!\r\n\r\nCan be used for production through any of the following vendors:\r\n- [JLCPCB](https://jlcpcb.com/): The default vendor. Recommended for most people!\r\n- [OSHPark](https://oshpark.com/): A US-based vendor with purple PCBs. A bit more expensive, but may be cheaper after shipping.\r\n- [PCBgogo](https://www.pcbgogo.com): Cheaper shipping for UK via Hong Kong post + $50 coupon for first time users.\r\n- [Aisler](https://aisler.net): A EU-based vendor with green PCBs. Pricing per square centimeter. Similar price as other vendors, but faster shipping to EU countries.\r\n- [PCBPower](https://pcbpower.com/): An India PCB Manufacturing company. Better shipping costs and no customs for Indian residents.\r\n- [metanoia-eg](https://metanoia-eg.com/): Egyptian PCB making company, Less costs for Egyptians!\r\n- [Elecrow](https://www.elecrow.com/): Cheaper shipping for CA. Ability to purchase only 1 board PCBA\r\n",
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA5OSwicHVyIjoiYmxvYl9pZCJ9fQ==--9e40bff661948bad02377bc02a8c98c875f442c5/pcb%2010.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "70.0",
+                "au": "70.0",
+                "ca": "70.0",
+                "eu": "70.0",
+                "in": "70.0",
+                "uk": "70.0",
+                "us": "70.0",
+                "xx": "70.0"
+            }
+        },
+        {
+            "id": 66,
+            "name": "Hack Club Pin",
+            "description": "now you get to wear hack club!",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::WarehouseItem",
+            "show_in_carousel": false,
+            "accessory_tag": "",
+            "agh_contents": [
+                {
+                    "sku": "Swa/HC/Pin/1st",
+                    "quantity": 1
+                }
+            ],
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": "",
+            "max_qty": null,
+            "one_per_person_ever": false,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTEzOTQsInB1ciI6ImJsb2JfaWQifX0=--24f2a6b4c9f9545f9132499c2a3757d8c1b3bb49/hcpin.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "60.0",
+                "au": "60.0",
+                "ca": "60.0",
+                "eu": "60.0",
+                "in": "60.0",
+                "uk": "60.0",
+                "us": "60.0",
+                "xx": "60.0"
+            }
+        },
+        {
+            "id": 67,
+            "name": "Candy Cane",
+            "description": "perfectly minty fresh",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::ThirdPartyPhysical",
+            "show_in_carousel": false,
+            "accessory_tag": "",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": "",
+            "max_qty": null,
+            "one_per_person_ever": true,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTMxMjIsInB1ciI6ImJsb2JfaWQifX0=--94135e727396fea94c4eaaf1599e115b6fc515e3/Candy-Cane-Classic-removebg-preview.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "25.0",
+                "au": "25.0",
+                "ca": "25.0",
+                "eu": "25.0",
+                "in": "25.0",
+                "uk": "25.0",
+                "us": "25.0",
+                "xx": "25.0"
+            }
+        },
+        {
+            "id": 68,
+            "name": "Custom Santa Hat",
+            "description": "a magical red hack club hat ",
+            "old_prices": [],
+            "limited": false,
+            "stock": null,
+            "type": "ShopItem::SpecialFulfillmentItem",
+            "show_in_carousel": false,
+            "accessory_tag": "",
+            "agh_contents": "",
+            "attached_shop_item_ids": [
+                null
+            ],
+            "buyable_by_self": true,
+            "long_description": "",
+            "max_qty": null,
+            "one_per_person_ever": true,
+            "sale_percentage": null,
+            "image_url": "https://flavortown.hackclub.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTMxNzAsInB1ciI6ImJsb2JfaWQifX0=--ee0636095ba4e83b2a2351786ba5be16942cf9f6/1000000062-removebg-preview.png",
+            "enabled": {
+                "enabled_au": true,
+                "enabled_ca": true,
+                "enabled_eu": true,
+                "enabled_in": true,
+                "enabled_uk": true,
+                "enabled_us": true,
+                "enabled_xx": true
+            },
+            "ticket_cost": {
+                "base_cost": "50.0",
+                "au": "50.0",
+                "ca": "50.0",
+                "eu": "50.0",
+                "in": "50.0",
+                "uk": "50.0",
+                "us": "50.0",
+                "xx": "50.0"
+            }
+        }
+    ]
+}

@@ -9,7 +9,7 @@ node_modules
 
 # Generated data file
 stats.json
-storage/stats.json
+storage/
 
 # Python artifacts
 __pycache__/

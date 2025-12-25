@@ -48,14 +48,75 @@ class requester:
 if __name__ == "__main__":
     import json
     req = requester()
+
+    def _format_time(seconds: float):
+        hours = int(seconds // 3600)
+        minutes = int((seconds % 3600) // 60)
+        secs = int(seconds % 60)
+        if hours > 0:
+            text_val = f"{hours}h {minutes}m"
+        elif minutes > 0:
+            text_val = f"{minutes}m"
+        else:
+            text_val = f"{secs}s"
+        digital = f"{hours:02d}:{minutes:02d}:{secs:02d}"
+        return {
+            "text": text_val,
+            "hours": hours,
+            "minutes": minutes,
+            "digital": digital,
+        }
+
+    languages = req.total_list
+    total_seconds_all = float(req.total_seconds) if req.total_seconds else 0.0
+
+    text_seconds = 0.0
+    python_entry = None
+    kept_languages = [i for i in languages]
+
+    #ignore
     
-    # Filter out "text" language entries
-    #filtered_languages = [lang for lang in req.total_list if lang.get("name", "").lower() != "text"]
-    filtered_languages = [lang for lang in req.total_list]
+    # for lang in languages:
+    #     name = (lang.get("name", "") or "").strip()
+    #     if name.lower() == "text":
+    #         text_seconds += float(lang.get("total_seconds", 0) or 0)
+    #         continue
+    #     if name.lower() == "python":
+    #         python_entry = lang
+    #     kept_languages.append(lang)
+
+    if text_seconds > 0:
+        if python_entry:
+            python_seconds = float(python_entry.get("total_seconds", 0) or 0) + text_seconds
+            fmt = _format_time(python_seconds)
+            python_entry.update({
+                "total_seconds": python_seconds,
+                "text": fmt["text"],
+                "hours": fmt["hours"],
+                "minutes": fmt["minutes"],
+                "digital": fmt["digital"],
+            })
+            if total_seconds_all:
+                python_entry["percent"] = (python_seconds / total_seconds_all) * 100.0
+
+        else:
+            fmt = _format_time(text_seconds)
+            new_py = {
+                "name": "Python",
+                "total_seconds": text_seconds,
+                "text": fmt["text"],
+                "hours": fmt["hours"],
+                "minutes": fmt["minutes"],
+                "digital": fmt["digital"],
+            }
+            if total_seconds_all:
+                new_py["percent"] = (text_seconds / total_seconds_all) * 100.0
+            kept_languages.append(new_py)
+
     output = {
         "total_seconds": req.total_seconds,
         "human_readable": req.human_readable_total,
-        "languages": filtered_languages
+        "languages": kept_languages
     }
     
     # OPTION 1: Print to screen (Required for the Extension to work)

@@ -56,7 +56,7 @@ go to your vscode's sidebar and look for extension, then search for Flavourtown-
    paste your apis![alt text](https://raw.githubusercontent.com/jasonw-w/FT_cookietracker/main/ide_demo2.png)
    enter your Hackatime Username![alt text](https://raw.githubusercontent.com/jasonw-w/FT_cookietracker/main/ide_demo3.png)
    press refresh![alt text](https://raw.githubusercontent.com/jasonw-w/FT_cookietracker/main/ide_demo4.png)
-   dont forget to set your target!!!![alt text](https://raw.githubusercontent.com/jasonw-w/FT_cookietracker/main/ide_demo5.png)
+   dont forget to set your target!!!![alt text](https://raw.githubusercontent.com/jasonw-w/FT_cookietracker/main/ide_demo6.png)
    Congradulations!!! You are all set!
 
 ## Troubleshooting

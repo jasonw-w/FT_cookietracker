@@ -28,6 +28,7 @@ class requester:
         self.total_seconds = self.data["data"]["total_seconds"]
         self.human_readable_total = self.data["data"]["human_readable_total"]
         self.total_list = self.data["data"]["languages"]
+        self.projects = self.data["data"].get("projects", [])
 
     def get_data(self, start_date, end_date):
         # Get stats for a specific time range
@@ -68,6 +69,7 @@ if __name__ == "__main__":
         }
 
     languages = req.total_list
+    projects = req.projects
     total_seconds_all = float(req.total_seconds) if req.total_seconds else 0.0
 
     text_seconds = 0.0
@@ -113,10 +115,24 @@ if __name__ == "__main__":
                 new_py["percent"] = (text_seconds / total_seconds_all) * 100.0
             kept_languages.append(new_py)
 
+    # Compute per-project breakdown for accurate cookie calculation
+    # Since ln(1+h) has diminishing returns, splitting by project gives more accurate total
+    project_list = []
+    for proj in projects:
+        proj_name = proj.get("name", "") or "Unknown"
+        proj_seconds = float(proj.get("total_seconds", 0) or 0)
+        proj_hours = proj_seconds / 3600.0
+        project_list.append({
+            "name": proj_name,
+            "hours": proj_hours,
+            "seconds": proj_seconds
+        })
+
     output = {
         "total_seconds": req.total_seconds,
         "human_readable": req.human_readable_total,
-        "languages": kept_languages
+        "languages": kept_languages,
+        "projects": project_list
     }
     
     # OPTION 1: Print to screen (Required for the Extension to work)

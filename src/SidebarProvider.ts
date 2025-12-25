@@ -71,12 +71,27 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
       const priceString = targetItem?.ticket_cost?.[country] ?? targetItem?.ticket_cost?.base_cost;
       const price = priceString ? parseFloat(String(priceString)) : undefined;
 
-      // Expected cookies using f(h) = 88 * (quality^k * (1 + beta * ln(1 + h)))
+      // Calculate cookies per-project to avoid ln(1+h) diminishing returns
+      // Sum of ln(1+h1) + ln(1+h2) > ln(1+h1+h2) due to logarithm properties
       const quality = Math.min(15, Math.max(1, Number(config.get<number>('quality') ?? 10)));
       const k = Number(config.get<number>('k') ?? 1);
       const beta = Number(config.get<number>('beta') ?? 2);
-      const hours = data.total_seconds ? Number(data.total_seconds) / 3600 : 0;
-      const cookiesEarned = 88 * Math.pow((quality)/15, k) * (1 + beta * Math.log(1 + hours));
+      
+      const projects = Array.isArray(data.projects) ? data.projects : [];
+      let cookiesEarned = 0;
+      
+      if (projects.length > 0) {
+        // Calculate cookies for each project separately, then sum
+        for (const proj of projects) {
+          const projHours = Number(proj.hours ?? 0);
+          cookiesEarned += 88 * Math.pow(quality / 15, k) * (1 + beta * Math.log(1 + projHours));
+        }
+      } else {
+        // Fallback to total hours if no project breakdown
+        const totalHours = Number(data.total_seconds ?? 0) / 3600;
+        cookiesEarned = 88 * Math.pow(quality / 15, k) * (1 + beta * Math.log(1 + totalHours));
+      }
+      
       const cookiesNeeded = price !== undefined ? Math.max(price - cookiesEarned, 0) : undefined;
       const progressPct = price !== undefined && price > 0 ? Math.min((cookiesEarned / price) * 100, 100) : undefined;
 

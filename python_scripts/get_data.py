@@ -24,7 +24,7 @@ class requester:
 
         self.BASE_URL = "https://hackatime.hackclub.com/api/v1"
         self.headers = {"Authorization": f"Bearer {self.API_KEY}"}
-        self.data = self.get_data("2025-12-15", time.strftime("%Y-%m-%d"))
+        self.data = self.get_data("2025-12-15", "2026-3-31")
         self.total_seconds = self.data["data"]["total_seconds"]
         self.human_readable_total = self.data["data"]["human_readable_total"]
         self.total_list = self.data["data"]["languages"]

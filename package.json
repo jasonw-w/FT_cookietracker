@@ -3,7 +3,7 @@
   "publisher": "Jasonw-w",
   "displayName": "flavourtown-sidebar",
   "description": "Made for Hack Club Flavourtown event, used to track your cookie earning progress and coding time in VS Code sidebar.",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "license": "MIT",
   "icon": "media/cookie.png",
   "extensionDependencies": ["ms-python.python"],
@@ -91,6 +91,12 @@
     "configuration": {
       "title": "Flavourtown",
       "properties": {
+        "flavourtown.pythonPath": {
+          "type": "string",
+          "markdownDescription": "Path to the Python interpreter. If not set, defaults to `python` or `python3` from the system path.",
+          "default": "",
+          "scope": "application"
+        },
         "flavourtown.hackatime_api": {
           "type": "string",
           "markdownDescription": "Hackatime API token used to fetch stats. Stored locally in your VS Code settings.",

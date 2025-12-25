@@ -1,8 +1,8 @@
-import * as vscode from 'vscode';
-import * as path from 'path';
-import { TextDecoder } from 'util';
-import { exec } from 'child_process';
-import { promisify } from 'util';
+import * as vscode from "vscode";
+import * as path from "path";
+import { TextDecoder } from "util";
+import { exec } from "child_process";
+import { promisify } from "util";
 
 const execAsync = promisify(exec);
 
@@ -14,9 +14,9 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
   public resolveWebviewView(
     webviewView: vscode.WebviewView,
     context: vscode.WebviewViewResolveContext,
-    _token: vscode.CancellationToken,
+    _token: vscode.CancellationToken
   ) {
-    console.log('[Flavourtown] resolveWebviewView called!');
+    console.log("[Flavourtown] resolveWebviewView called!");
     this._view = webviewView;
 
     // Allow scripts in the webview
@@ -33,11 +33,11 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
   }
 
   public async refreshData() {
-    console.log('[Flavourtown] refreshData called');
-    console.log('userefreshed');
-    if (!this._view) { 
-      console.log('[Flavourtown] No _view, returning');
-      return; 
+    console.log("[Flavourtown] refreshData called");
+    console.log("userefreshed");
+    if (!this._view) {
+      console.log("[Flavourtown] No _view, returning");
+      return;
     }
 
     // Show loading state
@@ -48,10 +48,12 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 
     try {
       // Run the Python script to generate fresh stats and store data
-      console.log('[Flavourtown] Running Python scripts to fetch stats and store data...');
+      console.log(
+        "[Flavourtown] Running Python scripts to fetch stats and store data..."
+      );
       await this._runPythonScript();
-      
-      console.log('[Flavourtown] About to read stats.json');
+
+      console.log("[Flavourtown] About to read stats.json");
       const data = await this._readStatsFromFile();
       if (!data) {
         this._view.webview.html = this._getHtmlForWebview(
@@ -63,37 +65,56 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 
       // Load store data for target progress
       const storeItems = await this._readStoreFromFile();
-      const config = vscode.workspace.getConfiguration('flavourtown');
-      const targetName = config.get<string>('storeItem')?.trim();
-      const country = (config.get<string>('country') ?? 'us').trim().toLowerCase();
-      const targetItem = targetName ? storeItems.find((i) => (i.name ?? '').trim() === targetName) : undefined;
+      const config = vscode.workspace.getConfiguration("flavourtown");
+      const targetName = config.get<string>("storeItem")?.trim();
+      const country = (config.get<string>("country") ?? "us")
+        .trim()
+        .toLowerCase();
+      const targetItem = targetName
+        ? storeItems.find((i) => (i.name ?? "").trim() === targetName)
+        : undefined;
 
-      const priceString = targetItem?.ticket_cost?.[country] ?? targetItem?.ticket_cost?.base_cost;
+      const priceString =
+        targetItem?.ticket_cost?.[country] ??
+        targetItem?.ticket_cost?.base_cost;
       const price = priceString ? parseFloat(String(priceString)) : undefined;
 
       // Calculate cookies per-project to avoid ln(1+h) diminishing returns
       // Sum of ln(1+h1) + ln(1+h2) > ln(1+h1+h2) due to logarithm properties
-      const quality = Math.min(15, Math.max(1, Number(config.get<number>('quality') ?? 10)));
-      const k = Number(config.get<number>('k') ?? 1);
-      const beta = Number(config.get<number>('beta') ?? 2);
-      
+      const quality = Math.min(
+        15,
+        Math.max(1, Number(config.get<number>("quality") ?? 10))
+      );
+      const k = Number(config.get<number>("k") ?? 1);
+      const beta = Number(config.get<number>("beta") ?? 2);
+
       const projects = Array.isArray(data.projects) ? data.projects : [];
       let cookiesEarned = 0;
-      
+
       if (projects.length > 0) {
         // Calculate cookies for each project separately, then sum
         for (const proj of projects) {
           const projHours = Number(proj.hours ?? 0);
-          cookiesEarned += 88 * Math.pow(quality / 15, k) * (1 + beta * Math.log(1 + projHours));
+          cookiesEarned +=
+            88 *
+            Math.pow(quality / 15, k) *
+            (1 + beta * Math.log(1 + projHours));
         }
       } else {
         // Fallback to total hours if no project breakdown
         const totalHours = Number(data.total_seconds ?? 0) / 3600;
-        cookiesEarned = 88 * Math.pow(quality / 15, k) * (1 + beta * Math.log(1 + totalHours));
+        cookiesEarned =
+          88 *
+          Math.pow(quality / 15, k) *
+          (1 + beta * Math.log(1 + totalHours));
       }
-      
-      const cookiesNeeded = price !== undefined ? Math.max(price - cookiesEarned, 0) : undefined;
-      const progressPct = price !== undefined && price > 0 ? Math.min((cookiesEarned / price) * 100, 100) : undefined;
+
+      const cookiesNeeded =
+        price !== undefined ? Math.max(price - cookiesEarned, 0) : undefined;
+      const progressPct =
+        price !== undefined && price > 0
+          ? Math.min((cookiesEarned / price) * 100, 100)
+          : undefined;
 
       const targetInfo = targetItem
         ? {
@@ -106,11 +127,14 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
           }
         : undefined;
 
-      console.log('[Flavourtown] Loaded stats.json');
+      console.log("[Flavourtown] Loaded stats.json");
       const htmlContent = this._generateStatsHtml(data, targetInfo);
-      this._view.webview.html = this._getHtmlForWebview(this._view.webview, htmlContent);
+      this._view.webview.html = this._getHtmlForWebview(
+        this._view.webview,
+        htmlContent
+      );
     } catch (err) {
-      console.error('[Flavourtown] Failed to fetch/read stats', err);
+      console.error("[Flavourtown] Failed to fetch/read stats", err);
       const message = err instanceof Error ? err.message : String(err);
       this._view.webview.html = this._getHtmlForWebview(
         this._view.webview,
@@ -120,20 +144,31 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
   }
 
   private async _runPythonScript(): Promise<void> {
-    const config = vscode.workspace.getConfiguration('flavourtown');
-    const hackatimeApiKey = [config.get<string>('hackatime_api'), process.env.HACKATIME_API_KEY]
-      .find((val) => (val ?? '').trim())
+    const config = vscode.workspace.getConfiguration("flavourtown");
+    const hackatimeApiKey = [
+      config.get<string>("hackatime_api"),
+      process.env.HACKATIME_API_KEY,
+    ]
+      .find((val) => (val ?? "").trim())
       ?.trim();
-    const flavourtownApiKey = [config.get<string>('flavourtown_api'), process.env.FT_API_KEY]
-      .find((val) => (val ?? '').trim())
+    const flavourtownApiKey = [
+      config.get<string>("flavourtown_api"),
+      process.env.FT_API_KEY,
+    ]
+      .find((val) => (val ?? "").trim())
       ?.trim();
-    const username = [config.get<string>('username'), process.env.HACKATIME_USERNAME]
-      .find((val) => (val ?? '').trim())
+    const username = [
+      config.get<string>("username"),
+      process.env.HACKATIME_USERNAME,
+    ]
+      .find((val) => (val ?? "").trim())
       ?.trim();
 
     // Warn but proceed so the Python script can still read a .env on disk
     if (!hackatimeApiKey || !username) {
-      console.warn('[Flavourtown] No Hackatime API key/username in settings or env; relying on python .env loading.');
+      console.warn(
+        "[Flavourtown] No Hackatime API key/username in settings or env; relying on python .env loading."
+      );
     }
 
     const cwd = this._extensionUri.fsPath;
@@ -146,38 +181,65 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
         ...(username ? { HACKATIME_USERNAME: username } : {}),
       },
     };
-    
-    // Try python3 first, fall back to python
-    const pythonCmd = process.platform === 'win32' ? 'python' : 'python3';
-    const altCmd = process.platform === 'win32' ? 'python3' : 'python';
 
-    const runScript = async (fileName: string) => {
-      const script = path.join(this._extensionUri.fsPath, 'python_scripts', fileName);
-      const primary = `${pythonCmd} "${script}"`;
-      console.log('[Flavourtown] Executing:', primary);
-      try {
-        const { stderr } = await execAsync(primary, execOptions);
-        if (stderr) {
-          console.warn('[Flavourtown] Python stderr:', stderr);
-        }
-        return;
-      } catch (error: any) {
-        if (error.message?.includes('python') || error.code === 'ENOENT') {
-          const fallback = `${altCmd} "${script}"`;
-          console.log('[Flavourtown] Retrying with', fallback);
-          const { stderr } = await execAsync(fallback, execOptions);
+    const pythonPath = config.get<string>("pythonPath")?.trim();
+
+    // Build candidate python launchers in priority order
+    const candidates: string[] = [];
+    if (pythonPath) {
+      candidates.push(`"${pythonPath}"`);
+    } else if (process.platform === "win32") {
+      // Prefer the Windows Python launcher when available
+      candidates.push("py -3");
+      candidates.push("python");
+      candidates.push("python3");
+    } else {
+      candidates.push("python3");
+      candidates.push("python");
+    }
+
+    const runWithCandidates = async (args: string[]) => {
+      let lastErr: unknown;
+      for (const base of candidates) {
+        const cmd = `${base} ${args.join(" ")}`;
+        console.log("[Flavourtown] Executing:", cmd);
+        try {
+          const { stderr } = await execAsync(cmd, execOptions);
           if (stderr) {
-            console.warn('[Flavourtown] Python stderr:', stderr);
+            // pip emits warnings to stderr; log but do not treat as fatal
+            if (/warning|note/i.test(stderr)) {
+              console.log("[Flavourtown] Python note:", stderr);
+            } else {
+              console.warn("[Flavourtown] Python stderr:", stderr);
+            }
           }
           return;
+        } catch (err) {
+          lastErr = err;
+          // Try next candidate
+          continue;
         }
-        throw error;
       }
+      throw lastErr;
+    };
+
+    // Ensure required Python packages are installed in the same interpreter
+    const reqPath = path.join(this._extensionUri.fsPath, "requirements.txt");
+    try {
+      await runWithCandidates(["-m", "pip", "install", "-r", `"${reqPath}"`]);
+    } catch (err) {
+      console.warn("[Flavourtown] Failed to install requirements via pip:", err);
+    }
+
+    // Helper to run a specific script file
+    const runScript = async (fileName: string) => {
+      const script = path.join(this._extensionUri.fsPath, "python_scripts", fileName);
+      await runWithCandidates([`"${script}"`]);
     };
 
     // Run both scripts on refresh/init
-    await runScript('get_data.py');
-    await runScript('get_targets.py');
+    await runScript("get_data.py");
+    await runScript("get_targets.py");
   }
 
   private async _readStatsFromFile(): Promise<any | undefined> {
@@ -185,25 +247,29 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 
     const candidates: vscode.Uri[] = [];
     if (workspaceUri) {
-      candidates.push(vscode.Uri.joinPath(workspaceUri, 'storage', 'stats.json'));
+      candidates.push(
+        vscode.Uri.joinPath(workspaceUri, "storage", "stats.json")
+      );
     }
-    candidates.push(vscode.Uri.joinPath(this._extensionUri, 'storage', 'stats.json'));
+    candidates.push(
+      vscode.Uri.joinPath(this._extensionUri, "storage", "stats.json")
+    );
 
     let lastErr: unknown;
     for (const fileUri of candidates) {
       try {
-        console.log('[Flavourtown] Reading', fileUri.fsPath);
+        console.log("[Flavourtown] Reading", fileUri.fsPath);
         const bytes = await vscode.workspace.fs.readFile(fileUri);
-        const json = new TextDecoder('utf-8').decode(bytes);
+        const json = new TextDecoder("utf-8").decode(bytes);
         return JSON.parse(json);
       } catch (err) {
         lastErr = err;
         if (err instanceof Error && /ENOENT/i.test(err.message)) {
-          console.log('[Flavourtown] Not found:', fileUri.fsPath);
+          console.log("[Flavourtown] Not found:", fileUri.fsPath);
           continue;
         }
 
-        console.log('[Flavourtown] Failed reading', fileUri.fsPath);
+        console.log("[Flavourtown] Failed reading", fileUri.fsPath);
       }
     }
 
@@ -218,14 +284,18 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
     const workspaceUri = vscode.workspace.workspaceFolders?.[0]?.uri;
     const candidates: vscode.Uri[] = [];
     if (workspaceUri) {
-      candidates.push(vscode.Uri.joinPath(workspaceUri, 'storage', 'ft_store.json'));
+      candidates.push(
+        vscode.Uri.joinPath(workspaceUri, "storage", "ft_store.json")
+      );
     }
-    candidates.push(vscode.Uri.joinPath(this._extensionUri, 'storage', 'ft_store.json'));
+    candidates.push(
+      vscode.Uri.joinPath(this._extensionUri, "storage", "ft_store.json")
+    );
 
-    const decoder = new TextDecoder('utf-8');
+    const decoder = new TextDecoder("utf-8");
     for (const fileUri of candidates) {
       try {
-        console.log('[Flavourtown] Reading store', fileUri.fsPath);
+        console.log("[Flavourtown] Reading store", fileUri.fsPath);
         const bytes = await vscode.workspace.fs.readFile(fileUri);
         const json = decoder.decode(bytes);
         const parsed = JSON.parse(json);
@@ -241,54 +311,78 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
     return [];
   }
 
-  private _generateStatsHtml(data: any, targetInfo?: {
-    name: string;
-    price?: number;
-    country: string;
-    cookiesEarned: number;
-    cookiesNeeded?: number;
-    progressPct?: number;
-  }): string {
-      if (!data) {
-        return `<div class="empty">No data available yet.</div>`;
-      }
+  private _generateStatsHtml(
+    data: any,
+    targetInfo?: {
+      name: string;
+      price?: number;
+      country: string;
+      cookiesEarned: number;
+      cookiesNeeded?: number;
+      progressPct?: number;
+    }
+  ): string {
+    if (!data) {
+      return `<div class="empty">No data available yet.</div>`;
+    }
 
-      const languages = Array.isArray(data.languages) ? data.languages : [];
-      const languagesHtml = languages.length > 0
-        ? languages.map((lang: any) => `
+    const languages = Array.isArray(data.languages) ? data.languages : [];
+    const languagesHtml =
+      languages.length > 0
+        ? languages
+            .map(
+              (lang: any) => `
             <div class="stat-item">
                 <span class="lang-name">${lang.name}</span>
                 <span class="lang-time">${lang.text}</span>
             </div>
-        `).join('')
+        `
+            )
+            .join("")
         : `<div class="empty">No languages to show.</div>`;
 
-      const total = data.human_readable || 'N/A';
+    const total = data.human_readable || "N/A";
 
-      const targetHtml = targetInfo
-        ? `
+    const targetHtml = targetInfo
+      ? `
           <div class="card">
             <h3>Target Item</h3>
             <div class="target-row">
               <div>
                 <div class="target-name">${targetInfo.name}</div>
-                <div class="target-price">Cost: ${targetInfo.price ?? 'N/A'} tickets (${targetInfo.country.toUpperCase()})</div>
+                <div class="target-price">Cost: ${
+                  targetInfo.price ?? "N/A"
+                } tickets (${targetInfo.country.toUpperCase()})</div>
               </div>
-              <div class="target-earned">${targetInfo.cookiesEarned.toFixed(1)} cookies earned (predicted)</div>
+              <div class="target-earned">${targetInfo.cookiesEarned.toFixed(
+                1
+              )} cookies earned (predicted)</div>
             </div>
-            ${targetInfo.progressPct !== undefined ? `
+            ${
+              targetInfo.progressPct !== undefined
+                ? `
               <div class="progress">
-                <div class="progress-bar" style="width:${targetInfo.progressPct.toFixed(1)}%"></div>
+                <div class="progress-bar" style="width:${targetInfo.progressPct.toFixed(
+                  1
+                )}%"></div>
               </div>
               <div class="progress-meta">
-                ${targetInfo.progressPct.toFixed(1)}% complete${targetInfo.cookiesNeeded !== undefined ? ` · ${targetInfo.cookiesNeeded.toFixed(1)} cookies remaining<br>Note: This is an estimate based on current data, can be inaccurate.` : ''}
+                ${targetInfo.progressPct.toFixed(1)}% complete${
+                    targetInfo.cookiesNeeded !== undefined
+                      ? ` · ${targetInfo.cookiesNeeded.toFixed(
+                          1
+                        )} cookies remaining<br>Note: This is an estimate based on current data, can be inaccurate.`
+                      : ""
+                  }
               </div>
-            ` : '<div class="empty">No price found for this item.</div>'}
+            `
+                : '<div class="empty">No price found for this item.</div>'
+            }
           </div>
         `
-        : '<div class="card"><h3>Target Item</h3><div class="empty">Set a store item in settings to track progress.</div></div>';
+      : '<div class="card"><h3>Target Item</h3><div class="empty">Set a store item in settings to track progress.</div></div>';
 
-      return `
+    return `
         <div class="card">
             <h2>Total Time</h2>
             <div class="total-time">${total}</div>
@@ -301,7 +395,10 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
       `;
   }
 
-  private _getHtmlForWebview(webview: vscode.Webview, content: string = "Loading..."): string {
+  private _getHtmlForWebview(
+    webview: vscode.Webview,
+    content: string = "Loading..."
+  ): string {
     return `<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -327,4 +424,4 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
     </body>
     </html>`;
   }
-}   
+}

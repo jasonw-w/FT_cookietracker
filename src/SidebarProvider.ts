@@ -1,10 +1,6 @@
 import * as vscode from "vscode";
 import * as path from "path";
-import { TextDecoder } from "util";
-import { exec } from "child_process";
-import { promisify } from "util";
-
-const execAsync = promisify(exec);
+import { fetchStats, fetchStore, ProcessedStore, StoreItem } from "./api";
 
 export class SidebarProvider implements vscode.WebviewViewProvider {
   _view?: vscode.WebviewView;
@@ -34,7 +30,6 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 
   public async refreshData() {
     console.log("[Flavourtown] refreshData called");
-    console.log("userefreshed");
     if (!this._view) {
       console.log("[Flavourtown] No _view, returning");
       return;
@@ -47,25 +42,63 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
     );
 
     try {
-      // Run the Python script to generate fresh stats and store data
-      console.log(
-        "[Flavourtown] Running Python scripts to fetch stats and store data..."
-      );
-      await this._runPythonScript();
+      const config = vscode.workspace.getConfiguration("flavourtown");
+      const hackatimeApiKey = [
+        config.get<string>("hackatime_api"),
+        process.env.HACKATIME_API_KEY,
+      ]
+        .find((val) => (val ?? "").trim())
+        ?.trim();
+      const flavourtownApiKey = [
+        config.get<string>("flavourtown_api"),
+        process.env.FT_API_KEY,
+      ]
+        .find((val) => (val ?? "").trim())
+        ?.trim();
+      const username = [
+        config.get<string>("username"),
+        process.env.HACKATIME_USERNAME,
+      ]
+        .find((val) => (val ?? "").trim())
+        ?.trim();
 
-      console.log("[Flavourtown] About to read stats.json");
-      const data = await this._readStatsFromFile();
-      if (!data) {
+      if (!hackatimeApiKey || !username) {
+        throw new Error("Missing Hackatime API key or Username. Please configure them in settings.");
+      }
+
+      // Fetch data using TypeScript API
+      console.log("[Flavourtown] Fetching stats and store data...");
+      
+      // Fetch stats and store independently so one failure doesn't block the other
+      let statsData: any = null;
+      try {
+        statsData = await fetchStats(hackatimeApiKey, username, this._extensionUri);
+      } catch (e) {
+        console.error("[Flavourtown] Hackatime fetch failed:", e);
+        throw e; // Stats are critical, so we rethrow if this fails
+      }
+
+      let storeData: ProcessedStore | null = null;
+      if (flavourtownApiKey) {
+        try {
+          storeData = await fetchStore(flavourtownApiKey, this._extensionUri);
+        } catch (e) {
+          console.error("[Flavourtown] Store fetch failed (continuing without store data):", e);
+          // We continue without store data
+        }
+      }
+
+      if (!statsData) {
         this._view.webview.html = this._getHtmlForWebview(
           this._view.webview,
-          `<div class="empty">No stats yet. Check that Python script ran successfully.</div>`
+          `<div class="empty">No stats available.</div>`
         );
         return;
       }
 
       // Load store data for target progress
-      const storeItems = await this._readStoreFromFile();
-      const config = vscode.workspace.getConfiguration("flavourtown");
+      const storeItems: StoreItem[] = storeData ? storeData.raw_data.items : [];
+      
       const targetName = config.get<string>("storeItem")?.trim();
       const country = (config.get<string>("country") ?? "us")
         .trim()
@@ -88,7 +121,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
       const k = Number(config.get<number>("k") ?? 1);
       const beta = Number(config.get<number>("beta") ?? 2);
 
-      const projects = Array.isArray(data.projects) ? data.projects : [];
+      const projects = Array.isArray(statsData.projects) ? statsData.projects : [];
       let cookiesEarned = 0;
 
       if (projects.length > 0) {
@@ -102,7 +135,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
         }
       } else {
         // Fallback to total hours if no project breakdown
-        const totalHours = Number(data.total_seconds ?? 0) / 3600;
+        const totalHours = Number(statsData.total_seconds ?? 0) / 3600;
         cookiesEarned =
           88 *
           Math.pow(quality / 15, k) *
@@ -127,188 +160,20 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
           }
         : undefined;
 
-      console.log("[Flavourtown] Loaded stats.json");
-      const htmlContent = this._generateStatsHtml(data, targetInfo);
+      console.log("[Flavourtown] Data loaded successfully");
+      const htmlContent = this._generateStatsHtml(statsData, targetInfo);
       this._view.webview.html = this._getHtmlForWebview(
         this._view.webview,
         htmlContent
       );
     } catch (err) {
-      console.error("[Flavourtown] Failed to fetch/read stats", err);
+      console.error("[Flavourtown] Failed to fetch stats", err);
       const message = err instanceof Error ? err.message : String(err);
       this._view.webview.html = this._getHtmlForWebview(
         this._view.webview,
-        `<div class="empty">Error: ${message}<br/><br/>Make sure APIs and Username is set in setting (gear icon at the top, look at README.md for tutorial finding your apis.)<br>Make sure Python and required packages are installed.</div>`
+        `<div class="empty">Error: ${message}<br/><br/>Make sure APIs and Username is set in setting (gear icon at the top, look at README.md for tutorial finding your apis.)</div>`
       );
     }
-  }
-
-  private async _runPythonScript(): Promise<void> {
-    const config = vscode.workspace.getConfiguration("flavourtown");
-    const hackatimeApiKey = [
-      config.get<string>("hackatime_api"),
-      process.env.HACKATIME_API_KEY,
-    ]
-      .find((val) => (val ?? "").trim())
-      ?.trim();
-    const flavourtownApiKey = [
-      config.get<string>("flavourtown_api"),
-      process.env.FT_API_KEY,
-    ]
-      .find((val) => (val ?? "").trim())
-      ?.trim();
-    const username = [
-      config.get<string>("username"),
-      process.env.HACKATIME_USERNAME,
-    ]
-      .find((val) => (val ?? "").trim())
-      ?.trim();
-
-    // Warn but proceed so the Python script can still read a .env on disk
-    if (!hackatimeApiKey || !username) {
-      console.warn(
-        "[Flavourtown] No Hackatime API key/username in settings or env; relying on python .env loading."
-      );
-    }
-
-    const cwd = this._extensionUri.fsPath;
-    const execOptions = {
-      cwd,
-      env: {
-        ...process.env,
-        ...(hackatimeApiKey ? { HACKATIME_API_KEY: hackatimeApiKey } : {}),
-        ...(flavourtownApiKey ? { FT_API_KEY: flavourtownApiKey } : {}),
-        ...(username ? { HACKATIME_USERNAME: username } : {}),
-      },
-    };
-
-    const pythonPath = config.get<string>("pythonPath")?.trim();
-
-    // Build candidate python launchers in priority order
-    const candidates: string[] = [];
-    if (pythonPath) {
-      candidates.push(`"${pythonPath}"`);
-    } else if (process.platform === "win32") {
-      // Prefer the Windows Python launcher when available
-      candidates.push("py -3");
-      candidates.push("python");
-      candidates.push("python3");
-    } else {
-      candidates.push("python3");
-      candidates.push("python");
-    }
-
-    const runWithCandidates = async (args: string[]) => {
-      let lastErr: unknown;
-      for (const base of candidates) {
-        const cmd = `${base} ${args.join(" ")}`;
-        console.log("[Flavourtown] Executing:", cmd);
-        try {
-          const { stderr } = await execAsync(cmd, execOptions);
-          if (stderr) {
-            // pip emits warnings to stderr; log but do not treat as fatal
-            if (/warning|note/i.test(stderr)) {
-              console.log("[Flavourtown] Python note:", stderr);
-            } else {
-              console.warn("[Flavourtown] Python stderr:", stderr);
-            }
-          }
-          return;
-        } catch (err) {
-          lastErr = err;
-          // Try next candidate
-          continue;
-        }
-      }
-      throw lastErr;
-    };
-
-    // Ensure required Python packages are installed in the same interpreter
-    const reqPath = path.join(this._extensionUri.fsPath, "requirements.txt");
-    try {
-      await runWithCandidates(["-m", "pip", "install", "-r", `"${reqPath}"`]);
-    } catch (err) {
-      console.warn("[Flavourtown] Failed to install requirements via pip:", err);
-    }
-
-    // Helper to run a specific script file
-    const runScript = async (fileName: string) => {
-      const script = path.join(this._extensionUri.fsPath, "python_scripts", fileName);
-      await runWithCandidates([`"${script}"`]);
-    };
-
-    // Run both scripts on refresh/init
-    await runScript("get_data.py");
-    await runScript("get_targets.py");
-  }
-
-  private async _readStatsFromFile(): Promise<any | undefined> {
-    const workspaceUri = vscode.workspace.workspaceFolders?.[0]?.uri;
-
-    const candidates: vscode.Uri[] = [];
-    if (workspaceUri) {
-      candidates.push(
-        vscode.Uri.joinPath(workspaceUri, "storage", "stats.json")
-      );
-    }
-    candidates.push(
-      vscode.Uri.joinPath(this._extensionUri, "storage", "stats.json")
-    );
-
-    let lastErr: unknown;
-    for (const fileUri of candidates) {
-      try {
-        console.log("[Flavourtown] Reading", fileUri.fsPath);
-        const bytes = await vscode.workspace.fs.readFile(fileUri);
-        const json = new TextDecoder("utf-8").decode(bytes);
-        return JSON.parse(json);
-      } catch (err) {
-        lastErr = err;
-        if (err instanceof Error && /ENOENT/i.test(err.message)) {
-          console.log("[Flavourtown] Not found:", fileUri.fsPath);
-          continue;
-        }
-
-        console.log("[Flavourtown] Failed reading", fileUri.fsPath);
-      }
-    }
-
-    if (lastErr instanceof Error && /ENOENT/i.test(lastErr.message)) {
-      return undefined;
-    }
-
-    throw lastErr;
-  }
-
-  private async _readStoreFromFile(): Promise<any[]> {
-    const workspaceUri = vscode.workspace.workspaceFolders?.[0]?.uri;
-    const candidates: vscode.Uri[] = [];
-    if (workspaceUri) {
-      candidates.push(
-        vscode.Uri.joinPath(workspaceUri, "storage", "ft_store.json")
-      );
-    }
-    candidates.push(
-      vscode.Uri.joinPath(this._extensionUri, "storage", "ft_store.json")
-    );
-
-    const decoder = new TextDecoder("utf-8");
-    for (const fileUri of candidates) {
-      try {
-        console.log("[Flavourtown] Reading store", fileUri.fsPath);
-        const bytes = await vscode.workspace.fs.readFile(fileUri);
-        const json = decoder.decode(bytes);
-        const parsed = JSON.parse(json);
-        const items = parsed?.raw_data?.items ?? parsed?.items ?? [];
-        if (Array.isArray(items)) {
-          return items;
-        }
-      } catch (err) {
-        continue;
-      }
-    }
-
-    return [];
   }
 
   private _generateStatsHtml(

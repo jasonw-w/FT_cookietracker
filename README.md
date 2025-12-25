@@ -2,30 +2,7 @@
 
 Shows your daily coding stats and progress toward your target item.
 
-## Python & Requirements
-
-1. [Install Python](https://www.python.org/downloads/)
-2. Requirements auto-install: the extension now installs packages from `requirements.txt` automatically the first time it runs. If you prefer to preinstall manually:
-
-```bash
-pip install -r requirements.txt
-```
-
-### Choosing the Python interpreter
-
-- In VS Code Settings, set `Flavourtown: Python Path` (`flavourtown.pythonPath`) to the absolute path of your Python executable. This is **required** if you use a virtual environment (venv) or if the extension cannot find `python` automatically.
-- Example paths:
-  - Windows: `C:\Users\You\Envs\env\Scripts\python.exe`
-  - Linux/Mac: `/home/you/env/bin/python`
-- If not set, the extension attempts to use the system `python` or `python3` command, which may not have the required packages if you installed them in a venv.
-- On Windows, a reliable manual install is:
-
-```powershell
-py -3 -m pip install -r requirements.txt
-```
-
 ## Setup
-
 1. set up Hackatime api
 
 log in to [Hackatime settings](https://hackatime.hackclub.com/my/settings)

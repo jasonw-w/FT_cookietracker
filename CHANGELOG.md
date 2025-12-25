@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.1.0] - 2025-12-25
+
+### Changed
+
+- now this extension no longer uses python, avoiding errors when installing python and its libraries (yay no more venv problem!)
+
 ## [0.0.7] - 2025-12-25
 
 ### Added

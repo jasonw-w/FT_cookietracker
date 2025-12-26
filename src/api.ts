@@ -213,6 +213,7 @@ export async function fetchStore(
     const response = await fetch(url, {
       headers: {
         Authorization: `Bearer ${apiKey}`,
+        "X-Flavortown-Ext-1694": "true",
       },
     });
 

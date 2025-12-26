@@ -80,6 +80,24 @@ export function activate(context: vscode.ExtensionContext) {
 	} catch (err) {
 		console.error('[Flavourtown] Failed to register WebviewViewProvider:', err);
 	}
+
+	// Listen for configuration changes and refresh data
+	context.subscriptions.push(
+		vscode.workspace.onDidChangeConfiguration((e) => {
+			if (e.affectsConfiguration('flavourtown')) {
+				console.log('[Flavourtown] Configuration changed, refreshing data...');
+				sidebarProvider.refreshData();
+			}
+		})
+	);
+
+	// Automatic refresh every 30 seconds
+	const intervalId = setInterval(() => {
+		console.log('[Flavourtown] Auto-refreshing data...');
+		sidebarProvider.refreshData();
+	}, 30000);
+
+	context.subscriptions.push({ dispose: () => clearInterval(intervalId) });
 }
 
 export function deactivate() {}

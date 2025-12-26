@@ -1,6 +1,10 @@
 # Flavourtown Time Tracking (VS Code Extension)
 
 Shows your daily coding stats and progress toward your target item.
+ - Vscode marketplace link(https://marketplace.visualstudio.com/items?itemName=Jasonw-w.flavourtown-sidebar)
+
+ - Open vsx(https://open-vsx.org/extension/Jasonw-w/flavourtown-sidebar)
+
 
 ## Setup
 1. set up Hackatime api

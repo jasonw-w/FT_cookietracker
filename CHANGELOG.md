@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.1.2] - 2025-12-26
+
+### Changed
+
+- Lowered minimum VS Code version requirement to 1.104.0 for better compatibility
+
 ## [0.1.1] - 2025-12-26
 
 ### Added

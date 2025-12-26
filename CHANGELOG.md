@@ -1,5 +1,12 @@
 # Change Log
 
+## [0.1.3] - 2025-12-26
+
+### Added
+
+- Auto-refresh data every 30 seconds
+- Auto-refresh data when extension settings are changed
+
 ## [0.1.2] - 2025-12-26
 
 ### Changed

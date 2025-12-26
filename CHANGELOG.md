@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.1.1] - 2025-12-26
+
+### Added
+
+- Added `X-Flavortown-Ext` header to API requests for project identification
+
 ## [0.1.0] - 2025-12-25
 
 ### Changed
